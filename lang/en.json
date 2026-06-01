@@ -1,0 +1,88 @@
+{
+  "global": {
+    "skip": "Skip to content",
+    "brandShort": "SKY UNITED",
+    "brandType": "Leader in High-Tech Packaging and Industrial-Grade ESD Protection"
+  },
+  "nav": {
+    "home": "Home",
+    "about": "About Us",
+    "products": "Products",
+    "news": "NEWS",
+    "contact": "CONTACT US"
+  },
+  "home": {
+    "hero": {
+      "page": "Home",
+      "imageLabel": "Image",
+      "title": "SKY UNITED INDUSTRIAL Co.,LTD.",
+      "subtitle": "SKY UNITED INDUSTRIAL CO., LTD. Leader in High-Tech Packaging and Industrial-Grade ESD Protection Sub-headline",
+      "description": "Manufacturer and Distributor of Plastic Packaging Materials for Industrial Applications",
+      "cta": {
+        "products": "View Products",
+        "contact": "Contact Us"
+      }
+    },
+    "products": {
+      "eyebrow": "Our products",
+      "title": "Our products",
+      "esd": {
+        "title": "ESD Packaging Solutions",
+        "items": [
+          "Moisture Barrier Bags",
+          "Static Shielding Bags",
+          "Cleanroom Plastic Bags",
+          "Vacuum Nylon Packaging Bags",
+          "Humidity Indicator Cards",
+          "Anti-Static Air Bubble Packaging",
+          "Protective Cushioning Wrap",
+          "Sulfur-Free Paper for Electronic Components"
+        ]
+      },
+      "cleanroom": {
+        "title": "Cleanroom & ESD Consumables",
+        "items": [
+          "Cleanroom Cotton Swabs",
+          "Cleanroom Foam Swabs",
+          "Anti-Static Cleanroom Wipers",
+          "Cleanroom Garments & Suits",
+          "Anti-Static Gloves & Latex Gloves"
+        ]
+      }
+    },
+    "why": {
+      "title": "Why Choose SKY United Industrial?",
+      "items": [
+        "Leading ESD packaging manufacturer in Thailand",
+        "Cleanroom production environment",
+        "Stable quality for semiconductor industry standards",
+        "ISO Standard Quality Control",
+        "Fast production lead time (5–7 days)",
+        "Strong supply capability across Southeast Asia",
+        "Custom packaging solution for industrial clients",
+        "Reliable B2B factory direct supply",
+        "Export to Southeast Asia"
+      ]
+    },
+    "articles": {
+      "eyebrow": "Article",
+      "items": [
+        {
+          "title": "Article 1: Tangible \"First Impressions\" Begin with Packaging",
+          "text": "In the business world, a sale doesn't end when a customer clicks \"Order.\" The true experience begins the moment the package arrives at their doorstep. Choosing high-quality packaging—like silky-smooth LDPE bags or robust Air Bubble wrapping—silently tells your customers, \"We care about and honor every single product before it reaches your hands.\" Investing in premium packaging isn't an expense; it’s an investment in 5-star reviews and long-term customer loyalty."
+        },
+        {
+          "title": "Article 2: Unlock Your Brand’s Premium Potential with Industrial-Grade Packaging",
+          "text": "What makes big brands so trustworthy? Part of the answer lies in the subtle details of how they pack their products. Upgrading to sleek, high-efficiency foil MBB bags or applying sharp, professionally designed Sticker Labels reflects ultimate professionalism. It effortlessly elevates a standard item into a \"premium product\" that customers trust and are more than willing to pay a higher price for."
+        },
+        {
+          "title": "Article 3: Good Packaging is Your Silent Yet Most Powerful Salesperson",
+          "text": "While you are asleep, your packaging is actively presenting your brand on delivery trucks, in warehouses, and in your customers' hands. Thick, durable, scratch-resistant Nylon bags instantly show the recipient how professional your business is, while high-quality Sticker Labels on the package consistently reinforce your brand’s logo and premium image every single second."
+        }
+      ]
+    }
+  },
+  "footer": {
+    "company": "SKY UNITED INDUSTRIAL (THAILAND) CO., LTD."
+  }
+}

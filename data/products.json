@@ -1,0 +1,104 @@
+{
+  "categories": [
+    {
+      "id": "esd-packaging",
+      "name": "ESD Packaging Solutions"
+    },
+    {
+      "id": "cleanroom-consumables",
+      "name": "Cleanroom & ESD Consumables"
+    }
+  ],
+  "products": [
+    {
+      "slug": "moisture-barrier-bags",
+      "category": "esd-packaging",
+      "name": "Moisture Barrier Bags (MBB)",
+      "imageFolder": "assets/images/products/mbb/"
+    },
+    {
+      "slug": "static-shielding-bags",
+      "category": "esd-packaging",
+      "name": "Static Shielding Bags (SSB)",
+      "imageFolder": "assets/images/products/ssb/"
+    },
+    {
+      "slug": "cleanroom-ldpe-bags",
+      "category": "esd-packaging",
+      "name": "Cleanroom LDPE Bags",
+      "imageFolder": "assets/images/products/ldpe/"
+    },
+    {
+      "slug": "cleanroom-hdpe-bags",
+      "category": "esd-packaging",
+      "name": "Cleanroom HDPE Bags",
+      "imageFolder": "assets/images/products/hdpe/"
+    },
+    {
+      "slug": "vacuum-nylon-packaging-bags",
+      "category": "esd-packaging",
+      "name": "Vacuum Nylon Packaging Bags",
+      "imageFolder": "assets/images/products/vacuum-nylon/"
+    },
+    {
+      "slug": "humidity-indicator-cards",
+      "category": "esd-packaging",
+      "name": "Humidity Indicator Cards (HIC)",
+      "imageFolder": "assets/images/products/hic/"
+    },
+    {
+      "slug": "anti-static-air-bubble-packaging",
+      "category": "esd-packaging",
+      "name": "Anti-Static Air Bubble Packaging",
+      "imageFolder": "assets/images/products/air-bubble/"
+    },
+    {
+      "slug": "protective-cushioning-wrap",
+      "category": "esd-packaging",
+      "name": "Protective Cushioning Wrap",
+      "imageFolder": "assets/images/products/cushion-wrap/"
+    },
+    {
+      "slug": "sulfur-free-paper",
+      "category": "esd-packaging",
+      "name": "Sulfur-Free Paper",
+      "imageFolder": "assets/images/products/sulfur-free-paper/"
+    },
+    {
+      "slug": "cleanroom-cotton-swabs",
+      "category": "cleanroom-consumables",
+      "name": "Cleanroom Cotton Swabs",
+      "imageFolder": "assets/images/products/cotton-swab/"
+    },
+    {
+      "slug": "cleanroom-foam-swabs",
+      "category": "cleanroom-consumables",
+      "name": "Cleanroom Foam Swabs",
+      "imageFolder": "assets/images/products/foam-swab/"
+    },
+    {
+      "slug": "anti-static-cleanroom-wipers",
+      "category": "cleanroom-consumables",
+      "name": "Anti-Static Cleanroom Wipers",
+      "imageFolder": "assets/images/products/wipers/"
+    },
+    {
+      "slug": "cleanroom-garments-suits",
+      "category": "cleanroom-consumables",
+      "name": "Cleanroom Garments & Suits",
+      "imageFolder": "assets/images/products/garments/"
+    },
+    {
+      "slug": "anti-static-gloves",
+      "category": "cleanroom-consumables",
+      "name": "Anti-Static Gloves",
+      "imageFolder": "assets/images/products/esd-gloves/"
+    },
+    {
+      "slug": "latex-gloves",
+      "category": "cleanroom-consumables",
+      "name": "Latex Gloves",
+      "imageFolder": "assets/images/products/latex-gloves/"
+    }
+  ]
+}

@@ -1,0 +1,205 @@
+.eyebrow {
+  margin: 0 0 1rem;
+  color: var(--color-primary);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  padding: 0.75rem 1.2rem;
+  border: 1px solid transparent;
+  border-radius: 12px;
+  text-decoration: none;
+  font-weight: 800;
+  transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease, background 180ms ease;
+}
+
+.button:hover {
+  transform: translateY(-2px);
+}
+
+.button--primary {
+  color: var(--color-white);
+  background: var(--color-primary);
+}
+
+.button--secondary {
+  color: var(--color-primary);
+  background: var(--color-white);
+  border-color: var(--color-primary);
+}
+
+.button--gold {
+  color: var(--color-white);
+  background: var(--color-gold);
+  box-shadow: 0 16px 36px rgba(212, 175, 55, 0.24);
+}
+
+.button--glass {
+  color: var(--color-white);
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(12px);
+}
+
+.button--small {
+  min-height: 40px;
+  padding: 0.55rem 0.95rem;
+  border-radius: 999px;
+  font-size: 0.86rem;
+}
+
+.brand-mark {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.8rem;
+  color: var(--color-white);
+  text-decoration: none;
+}
+
+.brand-symbol {
+  display: grid;
+  width: 42px;
+  height: 42px;
+  place-items: center;
+  border: 1px solid rgba(255, 255, 255, 0.24);
+  border-radius: 14px;
+  background: linear-gradient(135deg, var(--color-primary), #7fb4dc);
+  font-size: 0.78rem;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+}
+
+.brand-logo {
+  height: 48px !important;
+  width: auto !important;
+  max-height: 48px !important;
+  max-width: 150px !important;
+  flex-shrink: 0 !important;
+  object-fit: contain;
+}
+
+.brand-mark strong,
+.brand-mark small {
+  display: block;
+}
+
+.brand-mark strong {
+  font-size: 0.9rem;
+  letter-spacing: 0.08em;
+}
+
+.brand-mark small {
+  margin-top: 0.12rem;
+  color: rgba(255, 255, 255, 0.68);
+  font-size: 0.68rem;
+}
+
+.nav-links a {
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.language-pill {
+  min-height: 38px;
+  padding-inline: 0.9rem;
+  color: var(--color-white);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.08);
+  cursor: pointer;
+}
+
+/* Hamburger Button */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  width: 40px;
+  height: 40px;
+  padding: 6px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.hamburger span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: var(--color-white);
+  border-radius: 2px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Hamburger open state — X icon */
+.nav-open .hamburger span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.nav-open .hamburger span:nth-child(2) {
+  opacity: 0;
+}
+
+.nav-open .hamburger span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+/* Mobile Nav Drawer */
+.mobile-nav {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 49;
+  background: rgba(7, 17, 31, 0.97);
+  backdrop-filter: blur(20px);
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.nav-open .mobile-nav {
+  display: flex;
+  opacity: 1;
+}
+
+.mobile-nav a {
+  color: var(--color-white);
+  font-size: 1.4rem;
+  font-weight: 700;
+  text-decoration: none;
+  letter-spacing: 0.04em;
+  opacity: 0.85;
+  transition: opacity 0.2s ease;
+}
+
+.mobile-nav a:hover {
+  opacity: 1;
+}
+
+.mobile-nav .mobile-nav-lang {
+  margin-top: 1rem;
+}
+
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+}

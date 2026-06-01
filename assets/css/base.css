@@ -1,0 +1,78 @@
+:root {
+  --color-primary: #4875a0;
+  --color-sky: #93aecc;
+  --color-white: #ffffff;
+  --color-silver: #c0c0c0;
+  --color-gold: #d4af37;
+  --color-ink: #102033;
+  --color-muted: #5d6b7a;
+  --color-deep: #07111f;
+  --color-panel: #f5f8fb;
+  --color-line: rgba(72, 117, 160, 0.18);
+  --font-heading: "Noto Sans Thai", sans-serif;
+  --font-body: "Noto Sans Thai", sans-serif;
+  --container: 1440px;
+  --section-space: 120px;
+  --section-space-mobile: 80px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+html[lang="th"] {
+  line-height: 1.65;
+}
+
+html[lang="th"] h1,
+html[lang="th"] h2,
+html[lang="th"] h3 {
+  line-height: 1.18;
+  letter-spacing: -0.035em;
+}
+
+body {
+  margin: 0;
+  color: var(--color-ink);
+  background: var(--color-white);
+  font-family: var(--font-body);
+  text-rendering: optimizeLegibility;
+}
+
+img,
+svg,
+video {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+::selection {
+  color: var(--color-white);
+  background: var(--color-primary);
+}
+
+.skip-link {
+  position: absolute;
+  left: 1rem;
+  top: -100%;
+  z-index: 1000;
+}
+
+.skip-link:focus {
+  top: 1rem;
+}
