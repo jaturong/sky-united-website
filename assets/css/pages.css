@@ -1992,4 +1992,38 @@ html[data-lang="en"] a.len { display: inline !important; }
   .section-heading-row {
     align-items: flex-start;
   }
+
+}
+
+/* Gallery responsive — 3-col @ desktop, 2-col @ 980px, 1-col @ 640px */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+@media (max-width: 980px) {
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Certificates responsive — 2-col @ desktop, 1-col @ 640px */
+.certificates-grid {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 2rem;
+  align-items: center;
+}
+
+@media (max-width: 640px) {
+  .certificates-grid {
+    grid-template-columns: 1fr;
+  }
 }
