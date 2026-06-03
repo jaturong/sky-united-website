@@ -13,9 +13,20 @@
   position: fixed;
   top: 0;
   z-index: 50;
+  overflow: visible;
   border-bottom: 1px solid rgba(255, 255, 255, 0.12);
   background: rgba(7, 17, 31, 0.66);
   backdrop-filter: blur(20px);
+  transition: background 0.3s ease, border-color 0.3s ease;
+}
+
+.site-header.header--scrolled {
+  background: rgba(7, 17, 31, 0.92);
+  border-color: rgba(255, 255, 255, 0.18);
+}
+
+.site-header.header--scrolled .nav-shell {
+  min-height: 56px;
 }
 
 .nav-shell,
@@ -30,6 +41,7 @@
   align-items: center;
   justify-content: space-between;
   gap: 1.5rem;
+  transition: min-height 0.3s ease;
 }
 
 .nav-links,

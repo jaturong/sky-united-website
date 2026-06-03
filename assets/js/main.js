@@ -4,35 +4,47 @@ const SkyUnited = {
 
 document.documentElement.classList.add("js-enabled");
 
-// Hamburger menu toggle
 document.addEventListener("DOMContentLoaded", () => {
-  const hamburger = document.querySelector(".hamburger");
-  const body = document.body;
+  const toggle = document.querySelector(".nav-toggle");
+  const drawer = document.querySelector(".mobile-drawer");
+  const body   = document.body;
   const header = document.querySelector(".site-header");
-  const mobileNav = document.querySelector(".mobile-nav");
 
-  if (hamburger) {
-    // Set mobile-nav top position based on header height
-    const updateMobileNavPosition = () => {
-      if (header && mobileNav) {
-        const headerHeight = header.offsetHeight;
-        mobileNav.style.top = `${headerHeight}px`;
-      }
-    };
-
-    // Update on load and resize
-    updateMobileNavPosition();
-    window.addEventListener("resize", updateMobileNavPosition);
-
-    hamburger.addEventListener("click", () => {
-      body.classList.toggle("nav-open");
-    });
-
-    // Close on nav link click
-    document.querySelectorAll(".mobile-nav a").forEach((link) => {
-      link.addEventListener("click", () => {
-        body.classList.remove("nav-open");
-      });
-    });
+  // Header scroll-shrink animation
+  if (header) {
+    window.addEventListener("scroll", () => {
+      header.classList.toggle("header--scrolled", window.scrollY > 60);
+    }, { passive: true });
   }
+
+  if (!toggle || !drawer) return;
+
+  function closeMenu() {
+    body.classList.remove("nav-open");
+    toggle.setAttribute("aria-expanded", "false");
+    drawer.setAttribute("aria-hidden", "true");
+  }
+
+  // Toggle open/close
+  toggle.addEventListener("click", (e) => {
+    e.stopPropagation();
+    const isOpen = body.classList.toggle("nav-open");
+    toggle.setAttribute("aria-expanded", String(isOpen));
+    drawer.setAttribute("aria-hidden", String(!isOpen));
+  });
+
+  // Close on drawer link click
+  drawer.querySelectorAll("a").forEach((link) => {
+    link.addEventListener("click", () => closeMenu());
+  });
+
+  // Close on ESC
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") closeMenu();
+  });
+
+  // Close on click outside header
+  document.addEventListener("click", (e) => {
+    if (header && !header.contains(e.target)) closeMenu();
+  });
 });

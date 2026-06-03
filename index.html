@@ -37,21 +37,21 @@
           <a href="news.html" data-i18n="nav.news">ข่าวสาร</a>
           <a href="contact.html" data-i18n="nav.contact">ติดต่อเรา</a>
         </div>
-        <button class="hamburger" type="button" aria-label="Toggle navigation" aria-expanded="false">
+        <button class="nav-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false" aria-controls="mobile-drawer">
           <span></span><span></span><span></span>
         </button>
         <div class="nav-actions">
           <button class="language-pill" type="button" aria-label="Switch language" data-language-toggle>EN</button>
         </div>
       </nav>
-    <nav class="mobile-nav" aria-label="Mobile navigation">
+    <div class="mobile-drawer" id="mobile-drawer" aria-hidden="true">
       <a href="index.html" data-i18n="nav.home">หน้าหลัก</a>
       <a href="about.html" data-i18n="nav.about">เกี่ยวกับเรา</a>
       <a href="products.html" data-i18n="nav.products">ผลิตภัณฑ์</a>
       <a href="news.html" data-i18n="nav.news">ข่าวสาร</a>
       <a href="contact.html" data-i18n="nav.contact">ติดต่อเรา</a>
-      <button class="language-pill mobile-nav-lang" type="button" aria-label="Switch language" data-language-toggle>EN</button>
-    </nav>
+      <button class="language-pill" type="button" aria-label="Switch language" data-language-toggle>EN</button>
+    </div>
     </header>
     <main id="main">
       <section class="hero-section" data-section="home-hero">

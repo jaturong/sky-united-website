@@ -118,8 +118,8 @@
   cursor: pointer;
 }
 
-/* Hamburger Button */
-.hamburger {
+/* Nav Toggle (Hamburger) */
+.nav-toggle {
   display: none;
   flex-direction: column;
   justify-content: center;
@@ -134,7 +134,7 @@
   cursor: pointer;
 }
 
-.hamburger span {
+.nav-toggle span {
   display: block;
   width: 22px;
   height: 2px;
@@ -143,63 +143,59 @@
   transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
-/* Hamburger open state — X icon */
-.nav-open .hamburger span:nth-child(1) {
-  transform: translateY(7px) rotate(45deg);
-}
+.nav-open .nav-toggle span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.nav-open .nav-toggle span:nth-child(2) { opacity: 0; }
+.nav-open .nav-toggle span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 
-.nav-open .hamburger span:nth-child(2) {
-  opacity: 0;
-}
-
-.nav-open .hamburger span:nth-child(3) {
-  transform: translateY(-7px) rotate(-45deg);
-}
-
-/* Mobile Nav Drawer */
-.mobile-nav {
-  display: none;
-  position: fixed;
-  top: 76px;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 49;
-  background: rgba(7, 17, 31, 0.97);
-  backdrop-filter: blur(20px);
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 2rem;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
-
-.nav-open .mobile-nav {
-  display: flex;
-  opacity: 1;
-}
-
-.mobile-nav a {
-  color: var(--color-white);
-  font-size: 1.4rem;
-  font-weight: 700;
-  text-decoration: none;
-  letter-spacing: 0.04em;
-  opacity: 0.85;
-  transition: opacity 0.2s ease;
-}
-
-.mobile-nav a:hover {
-  opacity: 1;
-}
-
-.mobile-nav .mobile-nav-lang {
-  margin-top: 1rem;
-}
-
-@media (max-width: 640px) {
-  .hamburger {
+@media (max-width: 980px) {
+  .nav-toggle {
     display: flex;
   }
+}
+
+/* Mobile Drawer — ห้อยใต้ header ด้วย position: absolute top: 100% */
+.mobile-drawer {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 48;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  overflow: hidden;
+  max-height: 0;
+  opacity: 0;
+  pointer-events: none;
+  background: rgba(7, 17, 31, 0.97);
+  backdrop-filter: blur(20px);
+  transition: max-height 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+              opacity 0.3s ease;
+}
+
+.nav-open .mobile-drawer {
+  max-height: 440px;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.mobile-drawer a {
+  padding: 1.1rem 2rem;
+  color: var(--color-white);
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-decoration: none;
+  text-align: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+  transition: background 0.2s ease;
+}
+
+.mobile-drawer a:hover,
+.mobile-drawer a:focus {
+  background: rgba(255, 255, 255, 0.07);
+  outline: none;
+}
+
+.mobile-drawer .language-pill {
+  margin: 1rem auto;
 }
