@@ -213,4 +213,12 @@
   .brand-mark strong {
     font-size: 0.82rem;
   }
+
+  .nav-toggle {
+    order: 3;
+  }
+
+  .nav-actions {
+    order: 2;
+  }
 }
