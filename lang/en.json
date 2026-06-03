@@ -82,6 +82,19 @@
       ]
     }
   },
+  "aboutPage": {
+    "title": "ESD Packaging Manufacturer in Thailand",
+    "subtitle": "International-Standard ESD Bag & Industrial Packaging Factory",
+    "p1": "We are an ESD Packaging Manufacturer in Thailand and a factory producing packaging for the electronics and semiconductor industries in Thailand and throughout Southeast Asia. We specialize in Anti-Static Packaging for electronics, semiconductors, hard disk drives (HDD), printed circuit boards (PCB), automotive electronics, and high-precision components.",
+    "p2": "We focus on producing high-quality ESD Protection Packaging to protect electrostatic-sensitive electronic products throughout the entire supply chain, reducing damage and enhancing safety during transportation and storage.",
+    "p3": "Our factory is located in Phra Nakhon Si Ayutthaya Province, Thailand, on an area of over 13.8 rai (approximately 22,000 m²). It has been developed as an ESD bag and industrial packaging factory with a Cleanroom Manufacturing System and an international quality control standard.",
+    "p4": "At SKY United Industrial, we integrate industrial packaging manufacturing technology, high quality, and fast service (Fast Lead Time) to support customers in Thailand and the Southeast Asian region.",
+    "p5": "We understand the importance of stable supply, rapid lead time, and consistent quality — the cornerstones of modern manufacturing, especially in the electronics and semiconductor industries.",
+    "galleryHeading": "Gallery",
+    "certHeading": "Certificates & Accreditations",
+    "cert1Label": "Certificate 1",
+    "cert2Label": "Certificate (Landscape)"
+  },
   "productsPage_back": "← All Products",
   "contactPage": {
     "title": "Contact Us",
