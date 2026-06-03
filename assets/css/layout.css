@@ -62,7 +62,7 @@
 
   /* Push content below absolute-positioned header on mobile */
   body:not([data-page="home"]) main > .section-block:first-child > .page-shell {
-    padding-top: calc(var(--section-space-mobile) + 68px) !important;
+    padding-top: calc(var(--section-space-mobile) + 30px) !important;
   }
 
   .site-header {
