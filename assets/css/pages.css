@@ -1189,6 +1189,17 @@ p {
   display: block;
 }
 
+@media (max-width: 640px) {
+  .company-image-section {
+    height: auto;
+  }
+
+  .company-image-fullscreen {
+    height: auto;
+    object-fit: contain;
+  }
+}
+
 /* Footer Section */
 .site-footer {
   color: rgba(255, 255, 255, 0.8);
