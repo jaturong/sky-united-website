@@ -55,18 +55,14 @@
   padding-block: 2.5rem;
 }
 
-/* Push content below fixed header on desktop */
-body:not([data-page="home"]) main > .section-block:first-child > .page-shell {
-  padding-top: calc(var(--section-space) + 76px) !important;
-}
-
 @media (max-width: 980px) {
   .page-shell {
     padding-block: var(--section-space-mobile);
   }
 
+  /* Push content below absolute-positioned header on mobile */
   body:not([data-page="home"]) main > .section-block:first-child > .page-shell {
-    padding-top: var(--section-space-mobile) !important;
+    padding-top: calc(var(--section-space-mobile) + 68px) !important;
   }
 
   .site-header {
