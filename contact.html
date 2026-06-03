@@ -43,16 +43,32 @@
       }
 
       @media (max-width: 640px) {
+        [data-page="contact"] .page-shell {
+          padding-top: 1rem;
+          padding-bottom: 1rem;
+        }
+
+        [data-page="contact"] h1 {
+          margin-bottom: 1rem !important;
+        }
+
+        [data-page="contact"] h2 {
+          margin-bottom: 0.75rem !important;
+          font-size: 1rem !important;
+        }
+
         .contact-grid {
           grid-template-columns: 1fr;
-          gap: 1.5rem;
+          gap: 1rem;
+        }
+
+        .contact-grid > div:nth-child(1) > div {
+          margin-bottom: 1rem !important;
         }
 
         .contact-grid > div:nth-child(2) {
           min-height: 300px;
         }
-
-
       }
     </style>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
@@ -95,15 +111,14 @@
       <!-- Contact Section: 2-column layout -->
       <section class="section-block" data-section="contact-info">
         <div class="page-shell">
-          <h1 class="hero-title-compact" style="margin-bottom: 2rem;" data-i18n="contactPage.title">ติดต่อเรา</h1>
+          <h1 class="hero-title-compact" style="margin-bottom: 0.5rem;" data-i18n="contactPage.title">ติดต่อเรา</h1>
+          <p style="margin-bottom: 2rem; font-size: 1.1rem; color: #4875A0; font-weight: 600;" data-i18n="contactPage.infoHeading">ข้อมูลติดต่อ</p>
 
           <!-- 2-column layout: Contact info (left) + Map (right) -->
           <div class="contact-grid">
 
             <!-- Left column: Contact Information -->
             <div style="line-height: 1.8;">
-              <h2 style="margin-bottom: 1.5rem; color: #4875A0;" data-i18n="contactPage.infoHeading">ข้อมูลติดต่อ</h2>
-
               <div style="margin-bottom: 2rem;">
                 <p style="margin: 0 0 0.5rem 0; font-weight: 600; color: #333;" data-i18n="contactPage.companyLine1">บริษัท สกาย ยูไนเต็ด อินดัสเทรียล</p>
                 <p style="margin: 0 0 1rem 0; font-size: 0.95rem; color: #666;" data-i18n="contactPage.companyLine2">(ประเทศไทย) จำกัด</p>

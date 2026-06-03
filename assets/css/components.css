@@ -91,14 +91,14 @@
 }
 
 .brand-mark strong {
-  font-size: 0.9rem;
+  font-size: 1rem;
   letter-spacing: 0.08em;
 }
 
 .brand-mark small {
   margin-top: 0.12rem;
   color: rgba(255, 255, 255, 0.68);
-  font-size: 0.68rem;
+  font-size: 0.85rem;
 }
 
 .nav-links a {

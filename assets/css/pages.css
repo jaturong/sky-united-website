@@ -1688,7 +1688,32 @@ html[data-lang="en"] a.len { display: inline !important; }
   .product-menu-grid--4col { grid-template-columns: repeat(2, 1fr); }
   .product-menu-grid--5col { grid-template-columns: repeat(2, 1fr); }
   .products-cat-link { min-height: 280px; }
-  .product-detail-row { padding-block: 2.5rem; }
+
+  [data-page="product-detail"] .page-shell {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+  }
+
+  [data-page="product-detail"] .product-detail-row {
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  [data-page="products"] .product-detail-row {
+    padding-block: 1.5rem;
+  }
+
+  .product-detail-content .eyebrow { margin-bottom: 0.25rem; }
+
+  .product-detail-content h2 { margin-bottom: 0.25rem; }
+
+  .product-subtitle-th { margin-bottom: 0.75rem; }
+
+  .product-detail-summary { margin-bottom: 1.25rem; }
 }
 
 /* ========================================
@@ -1918,8 +1943,25 @@ html[data-lang="en"] a.len { display: inline !important; }
 }
 
 @media (max-width: 640px) {
-  .prod-page-hero { padding-block: 4rem 3rem; }
-  .prod-gallery-grid { gap: 0.75rem; }
+  [data-page="product-detail"] .prod-page-hero { padding-top: 0.3rem; padding-bottom: 1rem; }
+
+  .prod-desc-grid { gap: 1rem; padding-top: 1rem; margin-top: 1rem; }
+
+  .prod-desc-text p { margin-bottom: 0.75rem; }
+
+  .prod-info-block {
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.5rem;
+  }
+
+  .prod-info-block > h2 { margin-bottom: 0.75rem; }
+
+  .prod-tables-section { padding-top: 1.5rem; }
+
+  .prod-gallery-section { padding-top: 1.5rem; }
+
+  .prod-gallery-grid { gap: 0.75rem; margin-bottom: 2rem; }
+
   .prod-table th, .prod-table td { padding: 0.65rem 0.75rem; font-size: 0.82rem; }
 }
 
@@ -2021,7 +2063,7 @@ html[data-lang="en"] a.len { display: inline !important; }
 
 @media (max-width: 640px) {
   .gallery-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
