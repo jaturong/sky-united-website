@@ -4,10 +4,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>ผลิตภัณฑ์ | บริษัท สกาย ยูไนเต็ด อินดัสเทรียล</title>
-    <meta name="description" content="ผลิตภัณฑ์ - บริษัท สกาย ยูไนเต็ด อินดัสเทรียล บรรจุภัณฑ์ ESD และห้องคลีนรูม">
-    <meta name="keywords" content="Products, ESD Packaging, Cleanroom, SKY United">
+    <meta name="description" content="ผลิตภัณฑ์บรรจุภัณฑ์ ESD และสินค้าสำหรับห้องคลีนรูม - บริษัท สกาย ยูไนเต็ด อินดัสเทรียล">
+    <meta name="keywords" content="ESD Packaging, Cleanroom Consumables, MBB, SSB, SKY United">
     <meta property="og:title" content="ผลิตภัณฑ์ | บริษัท สกาย ยูไนเต็ด อินดัสเทรียล">
-    <meta property="og:description" content="ผลิตภัณฑ์ - บริษัท สกาย ยูไนเต็ด อินดัสเทรียล">
     <meta property="og:type" content="website">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,6 +16,9 @@
     <link rel="stylesheet" href="assets/css/components.css">
     <link rel="stylesheet" href="assets/css/pages.css">
     <link rel="stylesheet" href="assets/css/animations.css">
+    <style>
+      [data-page="products"] [data-section="products-intro"] .page-shell { padding-bottom: 0; }
+    </style>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
   </head>
   <body data-page="products">
@@ -44,59 +46,481 @@
           <button class="language-pill" type="button" aria-label="Switch language" data-language-toggle>EN</button>
         </div>
       </nav>
-    <nav class="mobile-nav" aria-label="Mobile navigation">
-      <a href="index.html" data-i18n="nav.home">หน้าหลัก</a>
-      <a href="about.html" data-i18n="nav.about">เกี่ยวกับเรา</a>
-      <a href="products.html" data-i18n="nav.products">ผลิตภัณฑ์</a>
-      <a href="news.html" data-i18n="nav.news">ข่าวสาร</a>
-      <a href="contact.html" data-i18n="nav.contact">ติดต่อเรา</a>
-      <button class="language-pill mobile-nav-lang" type="button" aria-label="Switch language" data-language-toggle>EN</button>
-    </nav>
+      <nav class="mobile-nav" aria-label="Mobile navigation">
+        <a href="index.html" data-i18n="nav.home">หน้าหลัก</a>
+        <a href="about.html" data-i18n="nav.about">เกี่ยวกับเรา</a>
+        <a href="products.html" data-i18n="nav.products">ผลิตภัณฑ์</a>
+        <a href="news.html" data-i18n="nav.news">ข่าวสาร</a>
+        <a href="contact.html" data-i18n="nav.contact">ติดต่อเรา</a>
+        <button class="language-pill mobile-nav-lang" type="button" aria-label="Switch language" data-language-toggle>EN</button>
+      </nav>
     </header>
+
     <main id="main">
-      <!-- Products Section - placeholder -->
+
+      <!-- ===== Section 1: Intro + Category Selector ===== -->
       <section class="section-block" data-section="products-intro">
         <div class="page-shell">
-          <h1 style="margin-bottom: 1rem; font-size: 2.5rem;">ผลิตภัณฑ์ของเรา</h1>
-          <p style="margin-bottom: 2rem; font-size: 1.1rem; color: #4875A0; font-weight: 600;">Solutions for ESD & Cleanroom Industries</p>
+          <h1 data-i18n="productsPage.title">ผลิตภัณฑ์ของเรา</h1>
+          <p class="lth" style="margin-top:1rem; font-size:1.1rem; color:#4875A0; font-weight:600;">โซลูชันบรรจุภัณฑ์ครบวงจร สำหรับอุตสาหกรรม ESD และห้องคลีนรูม</p>
+          <p class="len" style="margin-top:1rem; font-size:1.1rem; color:#4875A0; font-weight:600;">Complete packaging solutions for ESD and Cleanroom industries</p>
+
+          <div class="products-cat-grid">
+
+            <!-- ESD Card -->
+            <a href="#esd-menu" class="products-cat-link products-cat-link--esd">
+              <div>
+                <span class="products-cat-eyebrow">Category 01</span>
+                <h2 class="lth">โซลูชันบรรจุภัณฑ์ ESD</h2>
+                <h2 class="len">ESD Packaging Solutions</h2>
+                <p class="products-cat-subtitle lth">ESD Packaging Solutions</p>
+                <p class="products-cat-subtitle len">โซลูชันบรรจุภัณฑ์ ESD</p>
+              </div>
+              <div class="products-cat-meta">
+                <span class="lth">8 รายการ · คลิกเพื่อดูผลิตภัณฑ์</span>
+                <span class="len">8 Items · Click to view</span>
+                <span class="products-cat-arrow">↓</span>
+              </div>
+            </a>
+
+            <!-- Cleanroom Card -->
+            <a href="#cleanroom-menu" class="products-cat-link products-cat-link--cleanroom">
+              <div>
+                <span class="products-cat-eyebrow">Category 02</span>
+                <h2 class="lth">สินค้าสิ้นเปลืองสำหรับห้องคลีนรูม</h2>
+                <h2 class="len">Cleanroom & ESD Consumables</h2>
+                <p class="products-cat-subtitle lth">Cleanroom & ESD Consumables</p>
+                <p class="products-cat-subtitle len">สินค้าสิ้นเปลืองสำหรับห้องคลีนรูม</p>
+              </div>
+              <div class="products-cat-meta">
+                <span class="lth">5 รายการ · คลิกเพื่อดูผลิตภัณฑ์</span>
+                <span class="len">5 Items · Click to view</span>
+                <span class="products-cat-arrow">↓</span>
+              </div>
+            </a>
+
+          </div>
         </div>
       </section>
+
+      <!-- ===== Section 2: ESD Menu ===== -->
+      <section class="section-block prod-menu-section" id="esd-menu" data-section="esd-menu">
+        <div class="page-shell">
+          <p class="eyebrow">Category 01</p>
+          <h2 class="lth" data-i18n="productsPage.esdSection">โซลูชันบรรจุภัณฑ์ ESD</h2>
+          <h2 class="len">ESD Packaging Solutions</h2>
+
+          <div class="product-menu-grid product-menu-grid--4col">
+
+            <a href="#prod-mbb" class="product-menu-card">
+              <img src="assets/images/products/esd-1.png" alt="Moisture Barrier Bags MBB">
+              <div class="product-menu-card-name">
+                <strong>Moisture Barrier Bags (MBB)</strong>
+                <span class="lth">ถุงป้องกันความชื้นและไฟฟ้าสถิต</span>
+                <span class="len">ESD Moisture Barrier</span>
+              </div>
+            </a>
+
+            <a href="#prod-ssb" class="product-menu-card">
+              <img src="assets/images/products/esd-2.png" alt="Static Shielding Bags SSB">
+              <div class="product-menu-card-name">
+                <strong>Static Shielding Bags (SSB)</strong>
+                <span class="lth">ถุงป้องกันไฟฟ้าสถิต</span>
+                <span class="len">ESD Shielding Bag</span>
+              </div>
+            </a>
+
+            <a href="#prod-ldpe" class="product-menu-card">
+              <img src="assets/images/products/esd-3.png" alt="Cleanroom LDPE HDPE Bags">
+              <div class="product-menu-card-name">
+                <strong>Cleanroom LDPE &amp; HDPE Bags</strong>
+                <span class="lth">ถุงพลาสติกสำหรับห้องคลีนรูม</span>
+                <span class="len">Cleanroom Plastic Bags</span>
+              </div>
+            </a>
+
+            <a href="#prod-vacuum" class="product-menu-card">
+              <img src="assets/images/products/esd-4.png" alt="Vacuum Nylon Packaging Bags">
+              <div class="product-menu-card-name">
+                <strong>Vacuum Nylon Packaging Bags</strong>
+                <span class="lth">ถุงไนลอนสำหรับบรรจุภัณฑ์สูญญากาศ</span>
+                <span class="len">Vacuum Nylon Bags</span>
+              </div>
+            </a>
+
+            <a href="#prod-hic" class="product-menu-card">
+              <img src="assets/images/products/esd-5.png" alt="Humidity Indicator Cards HIC">
+              <div class="product-menu-card-name">
+                <strong>Humidity Indicator Cards (HIC)</strong>
+                <span class="lth">การ์ดวัดระดับความชื้น</span>
+                <span class="len">Moisture Detection Cards</span>
+              </div>
+            </a>
+
+            <a href="#prod-airbubble" class="product-menu-card">
+              <img src="assets/images/products/esd-6.png" alt="Anti-Static Air Bubble Packaging">
+              <div class="product-menu-card-name">
+                <strong>Anti-Static Air Bubble</strong>
+                <span class="lth">พลาสติกกันกระแทกป้องกัน ESD</span>
+                <span class="len">ESD Air Bubble Packaging</span>
+              </div>
+            </a>
+
+            <a href="#prod-cushion" class="product-menu-card">
+              <img src="assets/images/products/esd-7.png" alt="Protective Cushioning Wrap">
+              <div class="product-menu-card-name">
+                <strong>Protective Cushioning Wrap</strong>
+                <span class="lth">วัสดุห่อหุ้มกันกระแทก ESD</span>
+                <span class="len">ESD Cushioning Film</span>
+              </div>
+            </a>
+
+            <a href="#prod-sulfur" class="product-menu-card">
+              <img src="assets/images/products/esd-8.png" alt="Sulfur-Free Paper">
+              <div class="product-menu-card-name">
+                <strong>Sulfur-Free Paper</strong>
+                <span class="lth">กระดาษปราศจากซัลเฟอร์</span>
+                <span class="len">For Electronic Components</span>
+              </div>
+            </a>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== Section 3: Cleanroom Menu ===== -->
+      <section class="section-block prod-menu-section" id="cleanroom-menu" data-section="cleanroom-menu">
+        <div class="page-shell">
+          <p class="eyebrow">Category 02</p>
+          <h2 class="lth" data-i18n="productsPage.cleanroomSection">สินค้าสิ้นเปลืองสำหรับห้องคลีนรูม</h2>
+          <h2 class="len">Cleanroom &amp; ESD Consumables</h2>
+
+          <div class="product-menu-grid product-menu-grid--5col">
+
+            <a href="#prod-cotton" class="product-menu-card">
+              <img src="assets/images/products/consumable-1.png" alt="Cleanroom Cotton Swabs">
+              <div class="product-menu-card-name">
+                <strong>Cleanroom Cotton Swabs</strong>
+                <span class="lth">ก้านสำลีสำหรับห้องคลีนรูม</span>
+                <span class="len">Precision Cleaning Swabs</span>
+              </div>
+            </a>
+
+            <a href="#prod-foam" class="product-menu-card">
+              <img src="assets/images/products/consumable-2.png" alt="Cleanroom Foam Swabs">
+              <div class="product-menu-card-name">
+                <strong>Cleanroom Foam Swabs</strong>
+                <span class="lth">ก้านโฟมสำหรับห้องคลีนรูม</span>
+                <span class="len">Lint-Free Foam Swabs</span>
+              </div>
+            </a>
+
+            <a href="#prod-wipers" class="product-menu-card">
+              <img src="assets/images/products/consumable-3.png" alt="Anti-Static Cleanroom Wipers">
+              <div class="product-menu-card-name">
+                <strong>Anti-Static Wipers</strong>
+                <span class="lth">ผ้าเช็ดทำความสะอาดป้องกัน ESD</span>
+                <span class="len">Cleanroom Wipers</span>
+              </div>
+            </a>
+
+            <a href="#prod-garments" class="product-menu-card">
+              <img src="assets/images/products/consumable-4.png" alt="Cleanroom Garments Suits">
+              <div class="product-menu-card-name">
+                <strong>Cleanroom Garments &amp; Suits</strong>
+                <span class="lth">ชุดปฏิบัติการสำหรับห้องคลีนรูม</span>
+                <span class="len">ESD Protective Apparel</span>
+              </div>
+            </a>
+
+            <a href="#prod-gloves" class="product-menu-card">
+              <img src="assets/images/products/consumable-5.png" alt="Anti-Static Gloves Latex Gloves">
+              <div class="product-menu-card-name">
+                <strong>Anti-Static &amp; Latex Gloves</strong>
+                <span class="lth">ถุงมือป้องกันไฟฟ้าสถิต</span>
+                <span class="len">ESD &amp; Cleanroom Gloves</span>
+              </div>
+            </a>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== Section 4: ESD Product Details ===== -->
+      <section class="section-block prod-detail-section" data-section="esd-products">
+        <div class="page-shell">
+
+          <p class="eyebrow" style="margin-bottom:0.5rem;">ESD Packaging Solutions</p>
+          <h2 class="lth" style="margin-bottom:3rem;">โซลูชันบรรจุภัณฑ์ ESD — รายละเอียด</h2>
+          <h2 class="len" style="margin-bottom:3rem;">ESD Packaging — Product Details</h2>
+
+          <!-- 1. MBB — image LEFT -->
+          <div class="product-detail-row" id="prod-mbb">
+            <div class="product-detail-img">
+              <img src="assets/images/products/mbb/mbb-1.png" alt="Moisture Barrier Bags MBB">
+            </div>
+            <div class="product-detail-content">
+              <span class="eyebrow">ESD Packaging · 01</span>
+              <h2>Moisture Barrier Bags (MBB)</h2>
+              <p class="product-subtitle-th lth">ถุงป้องกันความชื้นและไฟฟ้าสถิต</p>
+              <p class="product-detail-summary lth">ถุงป้องกันความชื้นและไฟฟ้าสถิต (MBB) ออกแบบมาเพื่อปกป้องชิ้นส่วนอิเล็กทรอนิกส์และเซมิคอนดักเตอร์จากความชื้น ไฟฟ้าสถิต (ESD) ฝุ่น และการปนเปื้อน ผลิตภายในห้องคลีนรูมด้วยชั้นฟอยล์อลูมิเนียมคุณภาพสูง รองรับมาตรฐานอุตสาหกรรมเซมิคอนดักเตอร์ PCB และชิ้นส่วนที่ไวต่อไฟฟ้าสถิต</p>
+              <p class="product-detail-summary len">Moisture Barrier Bags (MBB) are designed to protect sensitive electronic and semiconductor components from moisture, ESD, dust, and contamination. Manufactured in cleanroom conditions with high-barrier aluminum layers, widely used in Semiconductor, PCB, and ESD-sensitive component packaging.</p>
+              <a href="products/mbb.html" class="btn-read-more" data-i18n="productsPage.readMore">อ่านต่อ →</a>
+            </div>
+          </div>
+
+          <!-- 2. SSB — image RIGHT -->
+          <div class="product-detail-row product-detail-row--reverse" id="prod-ssb">
+            <div class="product-detail-img">
+              <img src="assets/images/products/ssb/ssb-1.png" alt="Static Shielding Bags SSB">
+            </div>
+            <div class="product-detail-content">
+              <span class="eyebrow">ESD Packaging · 02</span>
+              <h2>Static Shielding Bags (SSB)</h2>
+              <p class="product-subtitle-th lth">ถุงป้องกันไฟฟ้าสถิต (ถุงชีลด์)</p>
+              <p class="product-detail-summary lth">ถุงป้องกันไฟฟ้าสถิต (SSB) ออกแบบมาเพื่อปกป้องชิ้นส่วนอิเล็กทรอนิกส์ที่ไวต่อไฟฟ้าสถิตจาก ESD ฝุ่น และความเสียหายระหว่างการจัดเก็บและขนส่ง ผลิตจากวัสดุนำไฟฟ้าและป้องกันไฟฟ้าสถิต รองรับมาตรฐานคลีนรูม เหมาะสำหรับงาน PCB, Semiconductor และ HDD</p>
+              <p class="product-detail-summary len">Static Shielding Bags (SSB) protect sensitive electronic components from ESD, dust, and damage during storage and transportation. Manufactured using conductive and static-shielding materials that meet cleanroom standards, ideal for PCB, Semiconductor, and HDD packaging applications.</p>
+              <a href="products/ssb.html" class="btn-read-more" data-i18n="productsPage.readMore">อ่านต่อ →</a>
+            </div>
+          </div>
+
+          <!-- 3. LDPE/HDPE — image LEFT -->
+          <div class="product-detail-row" id="prod-ldpe">
+            <div class="product-detail-img">
+              <img src="assets/images/products/ldpe/ldpe-hdpe-1.png" alt="Cleanroom LDPE HDPE Bags">
+            </div>
+            <div class="product-detail-content">
+              <span class="eyebrow">ESD Packaging · 03</span>
+              <h2>Cleanroom LDPE &amp; HDPE Bags</h2>
+              <p class="product-subtitle-th lth">ถุงพลาสติกสำหรับใช้ในห้องคลีนรูม</p>
+              <p class="product-detail-summary lth">ถุงพลาสติก LDPE และ HDPE สำหรับห้องคลีนรูม ผลิตภายใต้สภาวะห้องคลีนรูม ให้ความสะอาดเป็นเลิศ มีการเกิดอนุภาคต่ำ ปกป้องชิ้นส่วนอิเล็กทรอนิกส์ได้อย่างเชื่อถือได้ มีจำหน่ายในเกรดปราศจากซิลิโคนและอะไมด์ เหมาะสำหรับบรรจุภัณฑ์เซมิคอนดักเตอร์ PCB และ HDD</p>
+              <p class="product-detail-summary len">Cleanroom LDPE &amp; HDPE Bags manufactured under cleanroom conditions, providing excellent cleanliness, low particle generation, and reliable protection. Available in Non-Silicone and Non-Amide grades, suitable for Semiconductor, PCB, and HDD packaging where contamination control is critical.</p>
+              <a href="products/ldpe-hdpe.html" class="btn-read-more" data-i18n="productsPage.readMore">อ่านต่อ →</a>
+            </div>
+          </div>
+
+          <!-- 4. Vacuum Nylon — image RIGHT -->
+          <div class="product-detail-row product-detail-row--reverse" id="prod-vacuum">
+            <div class="product-detail-img">
+              <img src="assets/images/products/vacuum-nylon/vacuum-nylon-1.png" alt="Vacuum Nylon Packaging Bags">
+            </div>
+            <div class="product-detail-content">
+              <span class="eyebrow">ESD Packaging · 04</span>
+              <h2>Vacuum Nylon Packaging Bags</h2>
+              <p class="product-subtitle-th lth">ถุงไนลอนสำหรับบรรจุภัณฑ์สูญญากาศ</p>
+              <p class="product-detail-summary lth">ถุงไนลอนสำหรับบรรจุภัณฑ์สูญญากาศ ให้ประสิทธิภาพการซีลสูญญากาศที่ยอดเยี่ยม ป้องกันความชื้น ทนทานต่อการเจาะทะลุ ผลิตจากวัสดุไนลอนหลายชั้น (Multilayer Nylon) คุณภาพสูง เหมาะสำหรับชิ้นส่วนอิเล็กทรอนิกส์ เซมิคอนดักเตอร์ และสภาพแวดล้อมห้องคลีนรูม</p>
+              <p class="product-detail-summary len">Vacuum Nylon Packaging Bags provide excellent vacuum sealing, moisture resistance, and puncture resistance. Made from high-quality multilayer nylon materials, suitable for electronics, semiconductor packaging, and cleanroom environments requiring long-term product protection.</p>
+              <a href="products/vacuum-nylon.html" class="btn-read-more" data-i18n="productsPage.readMore">อ่านต่อ →</a>
+            </div>
+          </div>
+
+          <!-- 5. HIC — image LEFT -->
+          <div class="product-detail-row" id="prod-hic">
+            <div class="product-detail-img">
+              <img src="assets/images/products/hic/hic-1.png" alt="Humidity Indicator Cards HIC">
+            </div>
+            <div class="product-detail-content">
+              <span class="eyebrow">ESD Packaging · 05</span>
+              <h2>Humidity Indicator Cards (HIC)</h2>
+              <p class="product-subtitle-th lth">การ์ดหรือแผ่นวัดระดับความชื้น</p>
+              <p class="product-detail-summary lth">การ์ดวัดระดับความชื้น (HIC) ใช้สำหรับตรวจวัดความชื้นภายในถุง MBB และบรรจุภัณฑ์ที่ปิดผนึก มีให้เลือกแบบ 3 จุด และ 6 จุด รวมถึงเวอร์ชันปลอดสารโคบอลต์ แสดงระดับความชื้นด้วยการเปลี่ยนสีที่ชัดเจน ใช้แพร่หลายในงานบรรจุภัณฑ์เซมิคอนดักเตอร์และ ESD</p>
+              <p class="product-detail-summary len">Humidity Indicator Cards (HIC) monitor moisture levels inside MBB and sealed packaging for sensitive electronic components. Available in 3-dot and 6-dot types, including cobalt-free versions, with clear color-change indication for reliable moisture detection.</p>
+              <a href="products/hic.html" class="btn-read-more" data-i18n="productsPage.readMore">อ่านต่อ →</a>
+            </div>
+          </div>
+
+          <!-- 6. Air Bubble — image RIGHT -->
+          <div class="product-detail-row product-detail-row--reverse" id="prod-airbubble">
+            <div class="product-detail-img">
+              <img src="assets/images/products/air-bubble/air-bubble-1.png" alt="Anti-Static Air Bubble Packaging">
+            </div>
+            <div class="product-detail-content">
+              <span class="eyebrow">ESD Packaging · 06</span>
+              <h2>Anti-Static Air Bubble Packaging</h2>
+              <p class="product-subtitle-th lth">พลาสติกกันกระแทกแบบป้องกันไฟฟ้าสถิต</p>
+              <p class="product-detail-summary lth">พลาสติกกันกระแทกแบบป้องกันไฟฟ้าสถิต ออกแบบมาเพื่อปกป้องชิ้นส่วนอิเล็กทรอนิกส์จาก ESD แรงกระแทก และการสั่นสะเทือน ผลิตจากเม็ดพลาสติก PE ใหม่ 100% มีทั้งแบบใสและแบบสีชมพู ในรูปแบบม้วนและถุง พร้อมสั่งผลิตตามขนาดที่ต้องการ</p>
+              <p class="product-detail-summary len">Anti-Static Air Bubble Packaging protects electronic components from ESD, shock, and vibration. Made from 100% virgin PE materials, available in clear and pink anti-static types, in roll and bag forms with customized sizes to meet diverse industrial packaging requirements.</p>
+              <a href="products/air-bubble.html" class="btn-read-more" data-i18n="productsPage.readMore">อ่านต่อ →</a>
+            </div>
+          </div>
+
+          <!-- 7. Cushioning Wrap — image LEFT -->
+          <div class="product-detail-row" id="prod-cushion">
+            <div class="product-detail-img">
+              <img src="assets/images/products/cushion-wrap/cushion-wrap-1.png" alt="Protective Cushioning Wrap">
+            </div>
+            <div class="product-detail-content">
+              <span class="eyebrow">ESD Packaging · 07</span>
+              <h2>Protective Cushioning Wrap</h2>
+              <p class="product-subtitle-th lth">วัสดุห่อหุ้มเพื่อการปกป้องและกันกระแทก</p>
+              <p class="product-detail-summary lth">ฟิล์มพลาสติกกันกระแทกป้องกันไฟฟ้าสถิต ผลิตจากวัสดุโพลีเอสเตอร์ (PET) และ Metallocene PE คุณภาพสูง ออกแบบมาเพื่อประสิทธิภาพในการกันกระแทกและเป็นบรรจุภัณฑ์ที่ปลอดภัยจากไฟฟ้าสถิต เหมาะสำหรับอุปกรณ์อิเล็กทรอนิกส์ที่มีความละเอียดอ่อน</p>
+              <p class="product-detail-summary len">Protective Cushioning Wrap is an anti-static film made from high-quality PET and Metallocene PE materials, designed for cushioning protection and ESD-safe packaging of sensitive electronic and industrial products, often paired with automated wrapping machines.</p>
+              <a href="products/cushion-wrap.html" class="btn-read-more" data-i18n="productsPage.readMore">อ่านต่อ →</a>
+            </div>
+          </div>
+
+          <!-- 8. Sulfur-Free Paper — image RIGHT -->
+          <div class="product-detail-row product-detail-row--reverse" id="prod-sulfur">
+            <div class="product-detail-img">
+              <img src="assets/images/products/sulfur-free-paper/sulfur-free-paper-1.png" alt="Sulfur-Free Paper for Electronic Components">
+            </div>
+            <div class="product-detail-content">
+              <span class="eyebrow">ESD Packaging · 08</span>
+              <h2>Sulfur-Free Paper</h2>
+              <p class="product-subtitle-th lth">กระดาษปราศจากซัลเฟอร์สำหรับชิ้นส่วนอิเล็กทรอนิกส์</p>
+              <p class="product-detail-summary lth">กระดาษปราศจากซัลเฟอร์สำหรับชิ้นส่วนอิเล็กทรอนิกส์ ช่วยป้องกันการกัดกร่อน ออกซิเดชัน และปฏิกิริยาทางเคมีบนพื้นผิวโลหะของ PCB, FPC, CCL Substrates และงาน IC Packaging ใช้งานได้ทั้งในห้องคลีนรูมและโรงงานอิเล็กทรอนิกส์</p>
+              <p class="product-detail-summary len">Sulfur-Free Paper prevents corrosion, oxidation, and chemical reactions on metal surfaces of PCBs, semiconductors, and other sensitive components. Suitable for PCB, FPC, CCL Substrates, and IC Packaging applications in cleanroom and electronics manufacturing environments.</p>
+              <a href="products/sulfur-free-paper.html" class="btn-read-more" data-i18n="productsPage.readMore">อ่านต่อ →</a>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ===== Section 5: Cleanroom Product Details ===== -->
+      <section class="section-block prod-detail-section" data-section="cleanroom-products">
+        <div class="page-shell">
+
+          <p class="eyebrow" style="margin-bottom:0.5rem;">Cleanroom &amp; ESD Consumables</p>
+          <h2 class="lth" style="margin-bottom:3rem;">สินค้าสิ้นเปลือง — รายละเอียด</h2>
+          <h2 class="len" style="margin-bottom:3rem;">Cleanroom Consumables — Product Details</h2>
+
+          <!-- 1. Cotton Swabs — image LEFT -->
+          <div class="product-detail-row" id="prod-cotton">
+            <div class="product-detail-img">
+              <img src="assets/images/products/cotton-swab/cotton-swab-1.png" alt="Cleanroom Cotton Swabs">
+            </div>
+            <div class="product-detail-content">
+              <span class="eyebrow">Cleanroom Consumables · 01</span>
+              <h2>Cleanroom Cotton Swabs</h2>
+              <p class="product-subtitle-th lth">ก้านสำลีสำหรับใช้ในห้องคลีนรูม</p>
+              <p class="product-detail-summary lth">ก้านสำลีสำหรับห้องคลีนรูม ออกแบบมาสำหรับสภาพแวดล้อมที่ไวต่อสิ่งปนเปื้อน ผลิตจากวัสดุที่ก่อให้เกิดอนุภาคฝุ่นต่ำ (Low-particle) เหมาะสำหรับงานทำความสะอาดชิ้นส่วนอิเล็กทรอนิกส์ ขจัดฝุ่น และควบคุมสิ่งปนเปื้อนบนพื้นผิวที่บอบบาง</p>
+              <p class="product-detail-summary len">Cleanroom Cotton Swabs designed for contamination-sensitive environments such as semiconductor, electronics, and PCB industries. Manufactured using low-particle, cleanroom-compatible materials for precision cleaning, dust removal, and contamination control on delicate surfaces.</p>
+              <a href="products/cotton-swabs.html" class="btn-read-more" data-i18n="productsPage.readMore">อ่านต่อ →</a>
+            </div>
+          </div>
+
+          <!-- 2. Foam Swabs — image RIGHT -->
+          <div class="product-detail-row product-detail-row--reverse" id="prod-foam">
+            <div class="product-detail-img">
+              <img src="assets/images/products/foam-swab/foam-swab-1.png" alt="Cleanroom Foam Swabs">
+            </div>
+            <div class="product-detail-content">
+              <span class="eyebrow">Cleanroom Consumables · 02</span>
+              <h2>Cleanroom Foam Swabs</h2>
+              <p class="product-subtitle-th lth">ก้านโฟมเช็ดทำความสะอาดสำหรับห้องคลีนรูม</p>
+              <p class="product-detail-summary lth">ก้านโฟมเช็ดทำความสะอาดสำหรับห้องคลีนรูม แนะนำสำหรับงานที่ต้องการความแม่นยำสูง ควบคุมการเกิดอนุภาคให้อยู่ในระดับต่ำ และประสิทธิภาพแบบไร้ขุย 100% เหมาะสำหรับอุตสาหกรรมเซมิคอนดักเตอร์ อุปกรณ์ออปติก และสภาพแวดล้อมที่ไวต่อไฟฟ้าสถิต</p>
+              <p class="product-detail-summary len">Cleanroom Foam Swabs recommended for high-precision cleaning requiring low particle generation and 100% lint-free performance. Especially suited for semiconductor, optical, and ESD-sensitive environments where standard cotton swabs are insufficient.</p>
+              <a href="products/foam-swabs.html" class="btn-read-more" data-i18n="productsPage.readMore">อ่านต่อ →</a>
+            </div>
+          </div>
+
+          <!-- 3. Wipers — image LEFT -->
+          <div class="product-detail-row" id="prod-wipers">
+            <div class="product-detail-img">
+              <img src="assets/images/products/wipers/wipers-1.png" alt="Anti-Static Cleanroom Wipers">
+            </div>
+            <div class="product-detail-content">
+              <span class="eyebrow">Cleanroom Consumables · 03</span>
+              <h2>Anti-Static Cleanroom Wipers</h2>
+              <p class="product-subtitle-th lth">ผ้าเช็ดทำความสะอาดแบบป้องกันไฟฟ้าสถิต</p>
+              <p class="product-detail-summary lth">ผ้าเช็ดทำความสะอาดแบบป้องกันไฟฟ้าสถิตสำหรับห้องคลีนรูม ผลิตจากวัสดุที่ก่อให้เกิดอนุภาคต่ำและไร้ขุย ช่วยขจัดฝุ่น อนุภาค คราบน้ำมัน และสิ่งปนเปื้อน พร้อมลดการเกิดไฟฟ้าสถิตระหว่างการทำความสะอาด ใช้แพร่หลายในงาน Semiconductor, PCB และ ESD</p>
+              <p class="product-detail-summary len">Anti-Static Cleanroom Wipers manufactured using low-particle, lint-free materials to remove dust, particles, oil, and contaminants while reducing ESD during cleaning. Widely used in cleanroom packaging, semiconductor manufacturing, and PCB assembly processes.</p>
+              <a href="products/wipers.html" class="btn-read-more" data-i18n="productsPage.readMore">อ่านต่อ →</a>
+            </div>
+          </div>
+
+          <!-- 4. Garments — image RIGHT -->
+          <div class="product-detail-row product-detail-row--reverse" id="prod-garments">
+            <div class="product-detail-img">
+              <img src="assets/images/products/garments/garments-1.png" alt="Cleanroom Garments and Suits">
+            </div>
+            <div class="product-detail-content">
+              <span class="eyebrow">Cleanroom Consumables · 04</span>
+              <h2>Cleanroom Garments &amp; Suits</h2>
+              <p class="product-subtitle-th lth">ชุดและเครื่องแต่งกายสำหรับห้องคลีนรูม</p>
+              <p class="product-detail-summary lth">ชุดและเครื่องแต่งกายสำหรับห้องคลีนรูม ออกแบบมาเพื่อลดการปนเปื้อนของอนุภาคฝุ่นและการเกิดไฟฟ้าสถิต ผลิตจากวัสดุที่เกิดขุยต่ำและปลอดภัยจากไฟฟ้าสถิต มีให้เลือกหลากหลาย เช่น Coveralls, Lab Coats, ESD Garments, Hood &amp; Cap</p>
+              <p class="product-detail-summary len">Cleanroom Garments &amp; Suits designed to minimize particle contamination and ESD in cleanroom environments. Made from low-lint, ESD-safe materials. Available types include Coveralls, Cleanroom Suits, Lab Coats, ESD Garments, Hood &amp; Cap, and Anti-Static Uniforms.</p>
+              <a href="products/garments.html" class="btn-read-more" data-i18n="productsPage.readMore">อ่านต่อ →</a>
+            </div>
+          </div>
+
+          <!-- 5. Gloves — image LEFT -->
+          <div class="product-detail-row" id="prod-gloves">
+            <div class="product-detail-img">
+              <img src="assets/images/products/esd-gloves/esd-gloves-1.png" alt="Anti-Static and Latex Gloves">
+            </div>
+            <div class="product-detail-content">
+              <span class="eyebrow">Cleanroom Consumables · 05</span>
+              <h2>Anti-Static &amp; Latex Gloves</h2>
+              <p class="product-subtitle-th lth">ถุงมือป้องกันไฟฟ้าสถิต และถุงมือยางลาเท็กซ์</p>
+              <p class="product-detail-summary lth">ถุงมือป้องกันไฟฟ้าสถิต (ESD Gloves) และถุงมือยางลาเท็กซ์ (Latex Gloves) สำหรับใช้งานในห้องคลีนรูมและสภาพแวดล้อมที่ไวต่อไฟฟ้าสถิต ปกป้องมือผู้ปฏิบัติงานพร้อมควบคุมการปนเปื้อนในกระบวนการผลิตที่ต้องการความสะอาดสูง</p>
+              <p class="product-detail-summary len">Anti-Static ESD Gloves and Cleanroom Latex Gloves for cleanroom and static-sensitive manufacturing environments. Provides hand protection while maintaining contamination control in high-precision semiconductor, PCB, and electronics production processes.</p>
+              <a href="products/gloves.html" class="btn-read-more" data-i18n="productsPage.readMore">อ่านต่อ →</a>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
     </main>
+
     <footer class="site-footer" data-component="site-footer">
       <div class="footer-shell">
         <div class="footer-content">
-          <div class="footer-column--brand">
-            <h3 class="footer-brand-title" data-i18n="footer.company">บริษัท สกาย ยูไนเต็ด อินดัสเทรียล (ประเทศไทย) จำกัด</h3>
-            <p class="footer-brand-subtitle" data-i18n="global.brandType">ผู้นำด้านบรรจุภัณฑ์ไฮเทคและการป้องกันไฟฟ้าสถิตย์ระดับอุตสาหกรรม</p>
-            <p class="footer-brand-description" data-i18n="home.hero.description">ผลิตและจำหน่ายวัสดุบรรจุภัณฑ์พลาสติกเพื่อใช้ในอุตสาหกรรม</p>
+          <!-- Left Column: Brand Info -->
+          <div class="footer-column footer-column--brand">
+            <img src="assets/images/logo/sky-united-industrial-logo.png" alt="SKY UNITED INDUSTRIAL Logo" class="footer-logo">
+            <h3 class="footer-brand-title" data-i18n="footer.company">
+              บริษัท สกาย ยูไนเต็ด อินดัสเทรียล (ประเทศไทย) จำกัด
+            </h3>
+            <p class="footer-brand-subtitle" data-i18n="global.brandType">
+              ผู้นำด้านบรรจุภัณฑ์ไฮเทคและการป้องกันไฟฟ้าสถิตย์ระดับอุตสาหกรรม
+            </p>
+            <p class="footer-brand-description" data-i18n="home.hero.description">
+              ผลิตและจำหน่ายวัสดุบรรจุภัณฑ์พลาสติกเพื่อใช้ในอุตสาหกรรม
+            </p>
           </div>
-          <div class="footer-column--contact">
+
+          <!-- Right Column: Contact Info -->
+          <div class="footer-column footer-column--contact">
             <h3 class="footer-heading" data-i18n="footer.heading">ติดต่อเรา</h3>
-            <p class="footer-company-name" data-i18n="footer.company">บริษัท สกาย ยูไนเต็ด อินดัสเทรียล (ประเทศไทย) จำกัด</p>
-            <p class="footer-location-full" data-i18n="footer.locationFull">จังหวัดพระนครศรีอยุธยา, ประเทศไทย</p>
+            <p class="footer-company-name" data-i18n="footer.company">
+              บริษัท สกาย ยูไนเต็ด อินดัสเทรียล (ประเทศไทย) จำกัด
+            </p>
+            <p class="footer-location-full" data-i18n="footer.locationFull">
+              จังหวัดพระนครศรีอยุธยา, ประเทศไทย
+            </p>
             <div class="footer-contact-items">
-              <div class="footer-contact-item">
+              <a href="mailto:Sales@skyunitedindustrial.com" class="footer-contact-item">
+                <span class="footer-icon">✉</span>
                 <span class="footer-label" data-i18n="footer.email.label">Email:</span>
-                <a href="mailto:Sales@skyunitedindustrial.com" class="footer-value" data-i18n="footer.email.value">Sales@skyunitedindustrial.com</a>
-              </div>
-              <div class="footer-contact-item">
+                <span class="footer-value" data-i18n="footer.email.value">Sales@skyunitedindustrial.com</span>
+              </a>
+              <a href="tel:0996536354" class="footer-contact-item">
+                <span class="footer-icon">☎</span>
                 <span class="footer-label" data-i18n="footer.phone.label">โทร:</span>
-                <a href="tel:0996536354" class="footer-value" data-i18n="footer.phone.value">099-653-6354</a>
-              </div>
-              <div class="footer-contact-item">
+                <span class="footer-value" data-i18n="footer.phone.value">099-653-6354</span>
+              </a>
+              <a href="https://www.skyunitedindustrial.com" target="_blank" class="footer-contact-item">
+                <span class="footer-icon">🌐</span>
                 <span class="footer-label" data-i18n="footer.website.label">เว็บไซต์:</span>
-                <a href="https://www.skyunitedindustrial.com" class="footer-value" data-i18n="footer.website.value">www.skyunitedindustrial.com</a>
-              </div>
-              <div class="footer-contact-item">
+                <span class="footer-value" data-i18n="footer.website.value">www.skyunitedindustrial.com</span>
+              </a>
+              <a href="https://maps.app.goo.gl/SAYqJNgCsoNaBEU6" target="_blank" class="footer-contact-item">
+                <span class="footer-icon">📍</span>
                 <span class="footer-label" data-i18n="footer.map.label">แผนที่:</span>
-                <a href="https://maps.app.goo.gl/SAYqNGo5oNa8EUc6" class="footer-value" data-i18n="footer.map.value">ดูตำแหน่งบนแผนที่</a>
-              </div>
+                <span class="footer-value" data-i18n="footer.map.value">ดูตำแหน่งบนแผนที่</span>
+              </a>
             </div>
           </div>
         </div>
-        <p class="footer-copyright" data-i18n="footer.copyright">© 2026 SKY United Industrial (Thailand) Co., Ltd. สงวนลิขสิทธิ์ทั้งหมด</p>
+        <p class="footer-copyright" data-i18n="footer.copyright">
+          © 2026 SKY United Industrial (Thailand) Co., Ltd. สงวนลิขสิทธิ์ทั้งหมด
+        </p>
       </div>
     </footer>
+
     <script src="assets/js/main.js" defer></script>
     <script src="assets/js/animations.js" defer></script>
     <script src="assets/js/i18n.js" defer></script>

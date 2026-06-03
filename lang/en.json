@@ -82,6 +82,17 @@
       ]
     }
   },
+  "productsPage": {
+    "title": "Our Products",
+    "subtitle": "Complete packaging solutions for ESD and Cleanroom industries",
+    "catClickHint": "Click to view products",
+    "esdItems": "8 Items",
+    "cleanroomItems": "5 Items",
+    "readMore": "Read More →",
+    "imgPlaceholder": "Product Image",
+    "esdSection": "ESD Packaging Solutions",
+    "cleanroomSection": "Cleanroom & ESD Consumables"
+  },
   "footer": {
     "company": "SKY UNITED INDUSTRIAL (THAILAND) CO., LTD."
   }
