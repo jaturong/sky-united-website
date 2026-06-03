@@ -1,7 +1,7 @@
 {
   "global": {
     "skip": "Skip to content",
-    "brandShort": "SKY UNITED",
+    "brandShort": "SKY United Industrial",
     "brandType": "Leader in High-Tech Packaging and Industrial-Grade ESD Protection"
   },
   "nav": {
@@ -82,6 +82,16 @@
       ]
     }
   },
+  "contactPage": {
+    "title": "Contact Us",
+    "infoHeading": "Contact Information",
+    "companyLine1": "SKY United Industrial",
+    "companyLine2": "(Thailand) Co., Ltd.",
+    "addressLabel": "📍 Address",
+    "emailLabel": "✉️ Email",
+    "phoneLabel": "📞 Phone",
+    "websiteLabel": "🌐 Website"
+  },
   "productsPage": {
     "title": "Our Products",
     "subtitle": "Complete packaging solutions for ESD and Cleanroom industries",
@@ -94,6 +104,26 @@
     "cleanroomSection": "Cleanroom & ESD Consumables"
   },
   "footer": {
-    "company": "SKY UNITED INDUSTRIAL (THAILAND) CO., LTD."
+    "heading": "Contact Us",
+    "company": "SKY UNITED INDUSTRIAL (THAILAND) CO., LTD.",
+    "location": "Ayutthaya, Thailand",
+    "locationFull": "Ayutthaya Province, Thailand",
+    "email": {
+      "label": "Email:",
+      "value": "Sales@skyunitedindustrial.com"
+    },
+    "phone": {
+      "label": "Tel:",
+      "value": "099-653-6354"
+    },
+    "website": {
+      "label": "Website:",
+      "value": "www.skyunitedindustrial.com"
+    },
+    "map": {
+      "label": "Map:",
+      "value": "View Location on Map"
+    },
+    "copyright": "© 2026 SKY United Industrial (Thailand) Co., Ltd. All Rights Reserved."
   }
 }

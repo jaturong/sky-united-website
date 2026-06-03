@@ -82,6 +82,16 @@
       ]
     }
   },
+  "contactPage": {
+    "title": "ติดต่อเรา",
+    "infoHeading": "ข้อมูลติดต่อ",
+    "companyLine1": "บริษัท สกาย ยูไนเต็ด อินดัสเทรียล",
+    "companyLine2": "(ประเทศไทย) จำกัด",
+    "addressLabel": "📍 ที่อยู่",
+    "emailLabel": "✉️ อีเมล",
+    "phoneLabel": "📞 โทรศัพท์",
+    "websiteLabel": "🌐 เว็บไซต์"
+  },
   "productsPage": {
     "title": "ผลิตภัณฑ์ของเรา",
     "subtitle": "โซลูชันบรรจุภัณฑ์ครบวงจร สำหรับอุตสาหกรรม ESD และห้องคลีนรูม",
