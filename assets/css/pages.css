@@ -517,6 +517,18 @@ p {
   flex: 0 0 calc(25% - 0.75rem);
 }
 
+@media (max-width: 980px) {
+  .esd-product-card {
+    flex: 0 0 calc(50% - 0.5rem);
+  }
+}
+
+@media (max-width: 640px) {
+  .esd-product-card {
+    flex: 0 0 100%;
+  }
+}
+
 .esd-product-card:hover {
   border-color: rgba(72, 117, 160, 0.28);
   box-shadow: 0 32px 90px rgba(72, 117, 160, 0.18);
@@ -659,6 +671,18 @@ p {
   transform-style: preserve-3d;
   perspective: 1200px;
   flex: 0 0 calc(33.333% - 0.67rem);
+}
+
+@media (max-width: 980px) {
+  .consumables-product-card {
+    flex: 0 0 calc(50% - 0.5rem);
+  }
+}
+
+@media (max-width: 640px) {
+  .consumables-product-card {
+    flex: 0 0 100%;
+  }
 }
 
 .consumables-product-card:hover {
@@ -889,6 +913,12 @@ p {
   gap: 2rem;
   margin-top: 0;
   align-items: start;
+}
+
+@media (max-width: 640px) {
+  .articles-2col {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* Post-it Style Cards */

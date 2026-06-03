@@ -5,15 +5,22 @@
  */
 
 const ProductCarousel = (() => {
-  const ITEMS_VISIBLE = 4;
   const REDUCED_MOTION = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  function getItemsVisible() {
+    const width = window.innerWidth;
+    if (width <= 640) return 1;
+    if (width <= 980) return 2;
+    return 4;
+  }
 
   function createState(element) {
     const track    = element.querySelector('.esd-product-list');
     const controls = element.querySelector('.product-carousel-controls');
     const cards    = [...element.querySelectorAll('[data-product-card]')];
-    const totalPositions = Math.max(1, cards.length - ITEMS_VISIBLE + 1);
-    return { element, track, controls, cards, totalPositions, current: 0, dots: [] };
+    const itemsVisible = getItemsVisible();
+    const totalPositions = Math.max(1, cards.length - itemsVisible + 1);
+    return { element, track, controls, cards, totalPositions, current: 0, dots: [], itemsVisible };
   }
 
   function buildDots(state) {
@@ -54,7 +61,7 @@ const ProductCarousel = (() => {
   function attachInitialAnimation(state) {
     if (!window.gsap || !window.ScrollTrigger || REDUCED_MOTION) return;
     gsap.fromTo(
-      state.cards.slice(0, ITEMS_VISIBLE),
+      state.cards.slice(0, state.itemsVisible),
       { opacity: 0, y: 32, scale: 0.96 },
       {
         opacity: 1, y: 0, scale: 1,
@@ -86,8 +93,20 @@ const ProductCarousel = (() => {
       else          goToPosition(state, (state.current - 1 + state.totalPositions) % state.totalPositions);
     }, { passive: true });
 
-    // Resize: recalculate offset
-    window.addEventListener('resize', () => slide(state));
+    // Resize: recalculate itemsVisible, totalPositions, and offset
+    window.addEventListener('resize', () => {
+      const newItemsVisible = getItemsVisible();
+      if (newItemsVisible !== state.itemsVisible) {
+        state.itemsVisible = newItemsVisible;
+        state.totalPositions = Math.max(1, state.cards.length - state.itemsVisible + 1);
+        // Reset to first position if current position exceeds new totalPositions
+        if (state.current >= state.totalPositions) {
+          state.current = 0;
+          buildDots(state);
+        }
+      }
+      slide(state);
+    });
   }
 
   function attachAutoAdvance(state) {

@@ -4,15 +4,22 @@
  */
 
 const ConsumablesCarousel = (() => {
-  const ITEMS_VISIBLE = 3;
   const REDUCED_MOTION = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  function getItemsVisible() {
+    const width = window.innerWidth;
+    if (width <= 640) return 1;
+    if (width <= 980) return 2;
+    return 3;
+  }
 
   function createState(element) {
     const track    = element.querySelector('.consumables-product-list');
     const controls = element.querySelector('.consumables-carousel-controls');
     const cards    = [...element.querySelectorAll('[data-product-card]')];
-    const totalPositions = Math.max(1, cards.length - ITEMS_VISIBLE + 1);
-    return { element, track, controls, cards, totalPositions, current: 0, dots: [], autoTimer: null };
+    const itemsVisible = getItemsVisible();
+    const totalPositions = Math.max(1, cards.length - itemsVisible + 1);
+    return { element, track, controls, cards, totalPositions, current: 0, dots: [], autoTimer: null, itemsVisible };
   }
 
   function buildDots(state) {
@@ -69,7 +76,7 @@ const ConsumablesCarousel = (() => {
   function attachInitialAnimation(state) {
     if (!window.gsap || !window.ScrollTrigger || REDUCED_MOTION) return;
     gsap.fromTo(
-      state.cards.slice(0, ITEMS_VISIBLE),
+      state.cards.slice(0, state.itemsVisible),
       { opacity: 0, scale: 0.96 },
       {
         opacity: 1, scale: 1,
@@ -99,7 +106,18 @@ const ConsumablesCarousel = (() => {
       else          goToPosition(state, (state.current - 1 + state.totalPositions) % state.totalPositions);
     }, { passive: true });
 
-    window.addEventListener('resize', () => slide(state));
+    window.addEventListener('resize', () => {
+      const newItemsVisible = getItemsVisible();
+      if (newItemsVisible !== state.itemsVisible) {
+        state.itemsVisible = newItemsVisible;
+        state.totalPositions = Math.max(1, state.cards.length - state.itemsVisible + 1);
+        if (state.current >= state.totalPositions) {
+          state.current = 0;
+          buildDots(state);
+        }
+      }
+      slide(state);
+    });
   }
 
   function attachAutoAdvance(state) {
