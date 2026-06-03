@@ -56,8 +56,8 @@
 }
 
 /* Push content below fixed header on desktop */
-body:not([data-page="home"]) main {
-  padding-top: 140px;
+body:not([data-page="home"]) main > .section-block:first-child {
+  padding-top: 80px;
 }
 
 @media (max-width: 980px) {
@@ -65,8 +65,7 @@ body:not([data-page="home"]) main {
     padding-block: var(--section-space-mobile);
   }
 
-  /* header becomes absolute at mobile — remove main padding-top */
-  body:not([data-page="home"]) main {
+  body:not([data-page="home"]) main > .section-block:first-child {
     padding-top: 0;
   }
 
