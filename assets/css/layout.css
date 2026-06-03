@@ -43,7 +43,7 @@
   padding-block: 2.5rem;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 980px) {
   .page-shell {
     padding-block: var(--section-space-mobile);
   }
