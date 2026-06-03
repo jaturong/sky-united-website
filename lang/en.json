@@ -82,6 +82,7 @@
       ]
     }
   },
+  "productsPage_back": "← All Products",
   "contactPage": {
     "title": "Contact Us",
     "infoHeading": "Contact Information",

@@ -1359,9 +1359,12 @@ p {
    ======================================== */
 
 /* Language toggle helpers */
-.len { display: none; }
-html[data-lang="en"] .len { display: block; }
-html[data-lang="en"] .lth { display: none; }
+.len { display: none !important; }
+html[data-lang="en"] .len { display: block !important; }
+html[data-lang="en"] .lth { display: none !important; }
+/* inline contexts (spans inside flex/inline) */
+html[data-lang="en"] span.len,
+html[data-lang="en"] a.len { display: inline !important; }
 
 /* Category Hero */
 .products-cat-grid {
@@ -1687,7 +1690,7 @@ html[data-lang="en"] .lth { display: none; }
 }
 
 .prod-page-hero h1 {
-  font-size: clamp(2rem, 5vw, 3.8rem);
+  font-size: clamp(1.8rem, 5vw, 3.2rem);
   margin-bottom: 0.5rem;
   color: var(--color-white);
   max-width: none;
