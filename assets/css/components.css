@@ -220,5 +220,6 @@
 
   .nav-actions {
     order: 2;
+    margin-left: auto;
   }
 }
