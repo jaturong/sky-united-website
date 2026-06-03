@@ -199,3 +199,18 @@
 .mobile-drawer .language-pill {
   margin: 1rem auto;
 }
+
+@media (max-width: 980px) {
+  .brand-logo {
+    height: 36px !important;
+    max-height: 36px !important;
+  }
+
+  .brand-mark small {
+    display: none;
+  }
+
+  .brand-mark strong {
+    font-size: 0.82rem;
+  }
+}
