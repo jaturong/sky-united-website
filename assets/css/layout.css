@@ -26,7 +26,7 @@
 }
 
 .site-header.header--scrolled .nav-shell {
-  min-height: 56px;
+  min-height: 64px;
 }
 
 .nav-shell,
@@ -37,7 +37,7 @@
 
 .nav-shell {
   display: flex;
-  min-height: 76px;
+  min-height: 84px;
   align-items: center;
   justify-content: space-between;
   gap: 1.5rem;

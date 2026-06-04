@@ -86,9 +86,6 @@ SkyI18n.applyLanguage = async (language) => {
 };
 
 SkyI18n.init = async () => {
-  // Force Thai as default for now
-  localStorage.setItem("skyUnitedLanguage", "th");
-
   const storedLanguage = localStorage.getItem("skyUnitedLanguage");
   const initialLanguage = SkyI18n.supportedLanguages.includes(storedLanguage)
     ? storedLanguage

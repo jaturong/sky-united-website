@@ -1,7 +1,7 @@
 {
   "global": {
     "skip": "Skip to content",
-    "brandShort": "SKY United Industrial",
+    "brandShort": "SKY United Industrial (Thailand) Co., Ltd.",
     "brandType": "Leader in High-Tech Packaging and Industrial-Grade ESD Protection"
   },
   "nav": {
@@ -15,8 +15,8 @@
     "hero": {
       "page": "Home",
       "imageLabel": "Image",
-      "title": "SKY UNITED INDUSTRIAL Co.,LTD.",
-      "subtitle": "SKY UNITED INDUSTRIAL CO., LTD. Leader in High-Tech Packaging and Industrial-Grade ESD Protection Sub-headline",
+      "title": "SKY United Industrial (Thailand) Co., Ltd.",
+      "subtitle": "SKY United Industrial (Thailand) Co., Ltd. Leader in High-Tech Packaging and Industrial-Grade ESD Protection",
       "description": "Manufacturer and Distributor of Plastic Packaging Materials for Industrial Applications",
       "cta": {
         "products": "View Products",

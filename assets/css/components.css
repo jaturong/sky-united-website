@@ -91,21 +91,29 @@
 }
 
 .brand-mark strong {
-  font-size: 1rem;
-  letter-spacing: 0.08em;
+  font-size: 1.1rem;
 }
 
 .brand-mark small {
-  margin-top: 0.12rem;
+  margin-top: 0.08rem;
   color: rgba(255, 255, 255, 0.68);
-  font-size: 0.85rem;
+  font-size: 0.95rem;
 }
 
 .nav-links a {
   color: rgba(255, 255, 255, 0.78);
-  font-size: 0.9rem;
+  font-size: 1rem;
   font-weight: 700;
   text-decoration: none;
+}
+
+/* Thai language: increase font size slightly */
+[data-lang="th"] .brand-mark small {
+  font-size: 1rem;
+}
+
+[data-lang="th"] .nav-links a {
+  font-size: 1.1rem;
 }
 
 .language-pill {
