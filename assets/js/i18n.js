@@ -77,7 +77,6 @@ SkyI18n.applyLanguage = async (language) => {
   const toggle = document.querySelector("[data-language-toggle]");
 
   if (toggle) {
-    toggle.textContent = language === "th" ? "🇺🇸 EN" : "🇹🇭 TH";
     toggle.setAttribute(
       "aria-label",
       language === "th" ? "Switch language to English" : "เปลี่ยนภาษาเป็นไทย"
