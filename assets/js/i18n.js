@@ -81,6 +81,22 @@ SkyI18n.applyLanguage = async (language) => {
       "aria-label",
       language === "th" ? "Switch language to English" : "เปลี่ยนภาษาเป็นไทย"
     );
+
+    const img = toggle.querySelector(".flag-icon");
+    const span = toggle.querySelector("span:not(.flag-separator)");
+
+    if (img && span) {
+      const pathPrefix = SkyI18n.getPathPrefix();
+      if (language === "th") {
+        img.src = `${pathPrefix}assets/images/icons/flag-en.png`;
+        img.alt = "English";
+        span.textContent = "EN";
+      } else {
+        img.src = `${pathPrefix}assets/images/icons/flag-th.png`;
+        img.alt = "Thai";
+        span.textContent = "TH";
+      }
+    }
   }
 };
 
