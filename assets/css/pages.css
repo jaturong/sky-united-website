@@ -1462,6 +1462,7 @@ html[data-lang="en"] a.len { display: inline !important; }
 
 .products-cat-link h2 {
   font-size: clamp(1.4rem, 3vw, 2.1rem);
+  font-weight: 400;
   margin: 0.4rem 0 0;
   max-width: none;
   letter-spacing: -0.04em;
