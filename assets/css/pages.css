@@ -1918,6 +1918,12 @@ html[data-lang="en"] a.len { display: inline !important; }
   border-top: 1px solid rgba(72, 117, 160, 0.08);
 }
 
+.prod-gallery-section > .page-shell > h2 {
+  font-size: clamp(1.4rem, 2.5vw, 1.95rem);
+  margin-bottom: 0;
+  max-width: none;
+}
+
 .prod-gallery-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
