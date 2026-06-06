@@ -1726,7 +1726,7 @@ html[data-lang="en"] a.len { display: inline !important; }
     radial-gradient(circle at 70% 20%, rgba(147, 174, 204, 0.3), transparent 30rem),
     linear-gradient(135deg, #06101f 0%, #0b2038 52%, #102d49 100%);
   color: var(--color-white);
-  padding-block: 0.875rem 0.7rem;
+  padding-block: 0;
 }
 
 .back-link {
