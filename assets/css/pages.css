@@ -1733,6 +1733,13 @@ html[data-lang="en"] a.len { display: inline !important; }
   padding-bottom: 36px;
 }
 
+/* Reduce padding in product detail sections by 50% */
+[data-section="prod-desc"] > .page-shell,
+.prod-tables-section > .page-shell,
+.prod-gallery-section > .page-shell {
+  padding-block: 60px;
+}
+
 .back-link {
   display: inline-flex;
   align-items: center;
