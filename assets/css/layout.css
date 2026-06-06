@@ -57,6 +57,15 @@
   width: auto;
 }
 
+/* English language: compact navigation */
+[data-lang="en"] .nav-links {
+  gap: 0.7rem;
+}
+
+[data-lang="en"] .nav-links a {
+  font-size: 0.9rem;
+}
+
 .footer-shell {
   padding-block: 2.5rem;
 }
