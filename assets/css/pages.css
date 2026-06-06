@@ -1871,7 +1871,7 @@ html[data-lang="en"] a.len { display: inline !important; }
 .prod-table {
   width: 100%;
   border-collapse: collapse;
-  font-size: 0.91rem;
+  font-size: 1.05rem;
   min-width: 480px;
 }
 
