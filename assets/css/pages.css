@@ -1816,7 +1816,7 @@ html[data-lang="en"] a.len { display: inline !important; }
 
 .prod-desc-text p {
   color: var(--color-muted);
-  font-size: 0.96rem;
+  font-size: 1.05rem;
   line-height: 1.82;
   margin-bottom: 1rem;
   max-width: 620px;
