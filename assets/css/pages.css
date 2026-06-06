@@ -1745,6 +1745,7 @@ html[data-lang="en"] a.len { display: inline !important; }
   margin-bottom: 0;
   transition: color 0.2s;
   white-space: nowrap;
+  vertical-align: middle;
 }
 
 .prod-page-hero > .page-shell > div:has(.back-link) {
@@ -1770,6 +1771,7 @@ html[data-lang="en"] a.len { display: inline !important; }
   text-transform: uppercase;
   line-height: 1;
   white-space: nowrap;
+  vertical-align: middle;
   margin-bottom: 1rem;
 }
 
