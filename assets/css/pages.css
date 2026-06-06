@@ -1504,6 +1504,10 @@ html[data-lang="en"] a.len { display: inline !important; }
   border-top: 1px solid rgba(72, 117, 160, 0.1);
 }
 
+.prod-menu-section .page-shell {
+  padding-block: 60px;
+}
+
 #esd-menu,
 #cleanroom-menu {
   scroll-margin-top: 100px;
@@ -1565,6 +1569,10 @@ html[data-lang="en"] a.len { display: inline !important; }
 /* Product Detail Rows */
 .prod-detail-section {
   background: #ffffff;
+}
+
+.prod-detail-section .page-shell {
+  padding-block: 60px;
 }
 
 .prod-detail-section + .prod-detail-section {
