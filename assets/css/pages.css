@@ -1729,6 +1729,10 @@ html[data-lang="en"] a.len { display: inline !important; }
   padding-block: 0;
 }
 
+.prod-page-hero > .page-shell {
+  padding-bottom: 36px;
+}
+
 .back-link {
   display: inline-flex;
   align-items: center;
