@@ -63,8 +63,11 @@
 }
 
 [data-lang="en"] .nav-links a {
+  flex: 1;
+  text-align: center;
   font-size: 0.9rem;
-  padding-inline: 0.5rem;
+  padding-inline: 1rem !important;
+  white-space: nowrap;
 }
 
 .footer-shell {
