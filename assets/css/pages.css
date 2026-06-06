@@ -1841,7 +1841,7 @@ html[data-lang="en"] a.len { display: inline !important; }
 }
 
 .prod-info-block > h2 {
-  font-size: clamp(1.3rem, 2.5vw, 1.8rem);
+  font-size: clamp(1.4rem, 2.5vw, 1.95rem);
   margin-bottom: 1.25rem;
   max-width: none;
 }
