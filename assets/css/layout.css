@@ -64,6 +64,7 @@
 
 [data-lang="en"] .nav-links a {
   font-size: 0.9rem;
+  padding-inline: 0.5rem;
 }
 
 .footer-shell {
