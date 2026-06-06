@@ -1741,8 +1741,10 @@ html[data-lang="en"] a.len { display: inline !important; }
   text-decoration: none;
   font-size: 1.02rem;
   font-weight: 600;
+  line-height: 1;
   margin-bottom: 0;
   transition: color 0.2s;
+  white-space: nowrap;
 }
 
 .prod-page-hero > .page-shell > div:has(.back-link) {
@@ -1757,6 +1759,7 @@ html[data-lang="en"] a.len { display: inline !important; }
 .prod-category-badge {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   padding: 0.34rem 1.02rem;
   border-radius: 999px;
   border: 1px solid rgba(255, 255, 255, 0.22);
@@ -1765,6 +1768,8 @@ html[data-lang="en"] a.len { display: inline !important; }
   font-weight: 700;
   letter-spacing: 0.1em;
   text-transform: uppercase;
+  line-height: 1;
+  white-space: nowrap;
   margin-bottom: 1rem;
 }
 
