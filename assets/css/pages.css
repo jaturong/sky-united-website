@@ -1735,7 +1735,7 @@ html[data-lang="en"] a.len { display: inline !important; }
   gap: 0.4rem;
   color: rgba(255, 255, 255, 0.55);
   text-decoration: none;
-  font-size: 0.85rem;
+  font-size: 1.02rem;
   font-weight: 600;
   margin-bottom: 1.5rem;
   transition: color 0.2s;
@@ -1745,11 +1745,11 @@ html[data-lang="en"] a.len { display: inline !important; }
 
 .prod-category-badge {
   display: inline-block;
-  padding: 0.28rem 0.85rem;
+  padding: 0.34rem 1.02rem;
   border-radius: 999px;
   border: 1px solid rgba(255, 255, 255, 0.22);
   background: rgba(255, 255, 255, 0.09);
-  font-size: 0.7rem;
+  font-size: 0.84rem;
   font-weight: 700;
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -1757,7 +1757,7 @@ html[data-lang="en"] a.len { display: inline !important; }
 }
 
 .prod-page-hero h1 {
-  font-size: clamp(1.8rem, 5vw, 3.2rem);
+  font-size: clamp(1.26rem, 3.5vw, 2.24rem);
   margin-bottom: 0.5rem;
   color: var(--color-white);
   max-width: none;
