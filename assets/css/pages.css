@@ -1420,7 +1420,7 @@ html[data-lang="en"] a.len { display: inline !important; }
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  min-height: 130px;
+  min-height: 140px;
   padding: clamp(0.75rem, 2vw, 1.25rem);
   padding-left: clamp(1rem, 3vw, 1.5rem);
   border-radius: 16px;
