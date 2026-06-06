@@ -1421,7 +1421,7 @@ html[data-lang="en"] a.len { display: inline !important; }
   flex-direction: column;
   justify-content: space-between;
   min-height: 120px;
-  padding: clamp(1.5rem, 4vw, 3rem);
+  padding: clamp(0.75rem, 2vw, 1.25rem);
   border-radius: 16px;
   text-decoration: none;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -1460,13 +1460,13 @@ html[data-lang="en"] a.len { display: inline !important; }
 
 .products-cat-link h2 {
   font-size: clamp(1.4rem, 3vw, 2.1rem);
-  margin: 0.75rem 0 0;
+  margin: 0.4rem 0 0;
   max-width: none;
   letter-spacing: -0.04em;
 }
 
 .products-cat-subtitle {
-  margin: 0.4rem 0 0;
+  margin: 0.2rem 0 0;
   font-size: 0.9rem;
   font-weight: 500;
   opacity: 0.65;
@@ -1476,8 +1476,8 @@ html[data-lang="en"] a.len { display: inline !important; }
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-top: 2rem;
-  padding-top: 1.25rem;
+  margin-top: 1rem;
+  padding-top: 0.75rem;
   border-top: 1px solid rgba(255, 255, 255, 0.2);
   font-size: 0.82rem;
   font-weight: 700;
