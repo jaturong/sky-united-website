@@ -66,8 +66,22 @@
   white-space: nowrap;
 }
 
-.brand-name-line-2 {
-  display: none;
+.brand-mark span {
+  width: fit-content;
+}
+
+.brand-mark .brand-name-line-1,
+.brand-mark .brand-name-line-2 {
+  display: inline;
+}
+
+/* Override pages.css: html[data-lang="en"] .len (0,2,1) — must be (0,2,2)+ */
+html .brand-mark small.len,
+html .brand-mark small.lth {
+  display: none !important;
+  visibility: hidden !important;
+  height: 0 !important;
+  overflow: hidden !important;
 }
 
 /* Mobile: Show company name as 2 lines */
@@ -75,18 +89,20 @@
   .brand-mark {
     max-width: none;
     white-space: normal;
+    width: fit-content;
   }
 
   .brand-mark span {
     display: flex;
     flex-direction: column;
+    width: fit-content;
   }
 
-  .brand-name-line-1 {
+  .brand-mark .brand-name-line-1 {
     display: block;
   }
 
-  .brand-name-line-2 {
+  .brand-mark .brand-name-line-2 {
     display: block;
     font-size: 0.75rem;
     font-weight: 400;
@@ -128,10 +144,6 @@
   margin-top: 0.08rem;
   color: rgba(255, 255, 255, 0.68);
   font-size: 0.95rem;
-  display: none !important; /* Temporarily hidden */
-  visibility: hidden !important;
-  height: 0 !important;
-  overflow: hidden !important;
 }
 
 .nav-links a {
@@ -140,16 +152,6 @@
   font-weight: 700;
   text-decoration: none;
   padding-inline: 0.5rem;
-}
-
-/* Thai language: increase font size slightly */
-[data-lang="th"] .brand-mark small {
-  font-size: 1rem;
-  display: none !important;
-}
-
-[data-lang="en"] .brand-mark small {
-  display: none !important;
 }
 
 [data-lang="th"] .nav-links a {

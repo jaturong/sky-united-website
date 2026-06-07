@@ -1421,7 +1421,6 @@ html[data-lang="en"] a.len { display: inline !important; }
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  min-height: 140px;
   padding: clamp(0.75rem, 2vw, 1.25rem);
   padding-left: clamp(1rem, 3vw, 1.5rem);
   border-radius: 16px;
@@ -1699,7 +1698,7 @@ html[data-lang="en"] a.len { display: inline !important; }
 @media (max-width: 640px) {
   .product-menu-grid--4col { grid-template-columns: repeat(2, 1fr); }
   .product-menu-grid--5col { grid-template-columns: repeat(2, 1fr); }
-  .products-cat-link { min-height: 280px; }
+  .products-cat-link { min-height: 0; }
 
   [data-page="product-detail"] .page-shell {
     padding-top: 0 !important;
@@ -1770,13 +1769,16 @@ html[data-lang="en"] a.len { display: inline !important; }
   vertical-align: middle;
 }
 
-.prod-page-hero > .page-shell > .back-link {
-  margin-right: 0.6rem;
+.prod-page-hero > .page-shell > .prod-breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
   margin-bottom: 1.5rem;
 }
 
-.prod-page-hero > .page-shell > .prod-category-badge {
-  margin-bottom: 1.5rem;
+.prod-breadcrumb > .back-link,
+.prod-breadcrumb > .prod-category-badge {
+  margin-bottom: 0;
 }
 
 .back-link:hover { color: var(--color-white); }
@@ -1995,6 +1997,42 @@ html[data-lang="en"] a.len { display: inline !important; }
 @media (max-width: 640px) {
   [data-page="product-detail"] .prod-page-hero { padding-top: 0.3rem; padding-bottom: 1rem; }
 
+  body[data-page="product-detail"] main > .section-block:first-child > .page-shell {
+    padding-top: calc((var(--section-space-mobile) + 30px) / 2 + 25px) !important;
+  }
+
+  /* Divider between breadcrumb and product title */
+  .prod-breadcrumb {
+    display: block;
+    padding-top: 5px;
+    padding-bottom: 0.75rem;
+    margin-bottom: 0.75rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  }
+
+  .prod-page-hero h1 {
+    padding-top: 5px;
+  }
+
+  /* Breadcrumb: remove pill styling, join with "/" on mobile */
+  .prod-page-hero > .page-shell > .prod-breadcrumb > .back-link,
+  .prod-page-hero > .page-shell > .prod-breadcrumb > .prod-category-badge {
+    border: none;
+    background: none;
+    padding: 0;
+    border-radius: 0;
+    margin-bottom: 0.5rem;
+    letter-spacing: normal;
+    text-transform: none;
+    font-size: 0.85rem;
+  }
+
+  .prod-page-hero > .page-shell > .prod-breadcrumb > .back-link::after {
+    content: " /";
+    margin-left: 0.3rem;
+    color: rgba(255, 255, 255, 0.35);
+  }
+
   .prod-desc-grid { gap: 1rem; padding-top: 1rem; margin-top: 1rem; }
 
   .prod-desc-text p { margin-bottom: 0.75rem; }
@@ -2128,5 +2166,9 @@ html[data-lang="en"] a.len { display: inline !important; }
 @media (max-width: 640px) {
   .certificates-grid {
     grid-template-columns: 1fr;
+  }
+
+  [data-section="about-certificates"] img {
+    height: auto !important;
   }
 }
