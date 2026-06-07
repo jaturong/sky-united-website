@@ -66,6 +66,33 @@
   white-space: nowrap;
 }
 
+.brand-name-line-2 {
+  display: none;
+}
+
+/* Mobile: Show company name as 2 lines */
+@media (max-width: 768px) {
+  .brand-mark {
+    max-width: none;
+    white-space: normal;
+  }
+
+  .brand-mark span {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .brand-name-line-1 {
+    display: block;
+  }
+
+  .brand-name-line-2 {
+    display: block;
+    font-size: 0.75rem;
+    font-weight: 400;
+  }
+}
+
 .brand-symbol {
   display: grid;
   width: 42px;
