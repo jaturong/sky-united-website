@@ -91,13 +91,23 @@
   .nav-shell {
     min-height: auto;
     padding-block: 1rem;
+    flex-wrap: wrap;
+    align-items: flex-start;
   }
 
   .nav-links {
     display: none;
   }
 
+  .nav-actions {
+    margin-left: auto;
+  }
+
   .nav-actions .button {
     display: none;
+  }
+
+  .language-pill {
+    display: flex;
   }
 }
