@@ -174,17 +174,20 @@
         <div class="page-shell">
           <h2 style="margin-bottom: 2rem;" data-i18n="aboutPage.certHeading">ใบประกาศและการรับรอง</h2>
 
-          <!-- Row 1: 2 Portrait Certificates -->
-          <div class="certificates-grid" style="grid-template-columns: repeat(2, 1fr);">
-            <!-- Left: cert-portrait-1 -->
+          <!-- Row 1: Portrait Certificates (3 columns - 2 auto + 1fr space) -->
+          <div class="certificates-grid" style="grid-template-columns: auto auto 1fr; gap: 20px; justify-items: start;">
+            <!-- Column 1: cert-portrait-1 -->
             <div style="text-align: center;">
               <img src="assets/images/certificates/cert-portrait-1.png" alt="Certificate 1" style="width: 100%; max-width: 350px; height: 400px; object-fit: contain; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
             </div>
 
-            <!-- Right: cert-portrait-2 -->
+            <!-- Column 2: cert-portrait-2 -->
             <div style="text-align: center;">
               <img src="assets/images/certificates/cert-portrait-2.png" alt="Certificate 2" style="width: 100%; max-width: 350px; height: 400px; object-fit: contain; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
             </div>
+
+            <!-- Column 3: Empty space (auto width fill) -->
+            <div></div>
           </div>
 
           <!-- Row 2: Landscape Certificate -->
