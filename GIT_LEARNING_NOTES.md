@@ -771,5 +771,65 @@ done
 
 ---
 
+## 📌 Phase 2: Meta Descriptions Implementation
+
+### 12.1 Meta Descriptions คืออะไร?
+
+**Meta description** = ข้อความ 120-155 ตัวอักษร ที่ Google แสดงในผลการค้นหา
+
+**ข้อดี:**
+- ✅ ส่งผลต่อ Click-Through Rate (CTR)
+- ✅ บอก user ว่าหน้านี้เกี่ยวกับอะไร
+- ✅ รวม keywords สำหรับ SEO
+
+### Step 1: ตรวจสอบ Meta Descriptions ปัจจุบัน
+
+**ก่อน:**
+```
+contact.html: "ติดต่อเรา - บริษัท สกาย ยูไนเต็ด อินดัสเทรียล" (48 chars)
+news.html:    "ข่าวสาร - บริษัท สกาย ยูไนเต็ด อินดัสเทรียล" (49 chars)
+index.html:   "บริษัท สกาย ยูไนเต็ด อินดัสเทรียล... (ยาว)
+```
+
+### Step 2: เขียน Meta Descriptions ใหม่
+
+**Contact.html** (125 chars):
+```
+ติดต่อเรา - บริษัท สกาย ยูไนเต็ด อินดัสเทรียล ผู้นำบรรจุภัณฑ์ ESD ในประเทศไทย เรียนรู้วิธีการติดต่อและจัดส่งสินค้า
+```
+
+**News.html** (116 chars):
+```
+ข่าวสาร - บริษัท สกาย ยูไนเต็ด อินดัสเทรียล บทความและข้อมูลล่าสุดเกี่ยวกับบรรจุภัณฑ์ ESD และอุตสาหกรรม
+```
+
+**Index.html** (65 chars):
+```
+บริษัท สกาย ยูไนเต็ด อินดัสเทรียล - ผู้นำบรรจุภัณฑ์ ESD และโซลูชันการป้องกันไฟฟ้าสถิต
+```
+
+### Step 3: Update & Commit
+
+**Commit:**
+```
+4fb2ac2 feat: expand meta descriptions for seo (phase 2)
+```
+
+**ความหมาย:**
+- ✅ Meta descriptions ขยายให้ครบตามมาตรฐาน SEO
+- ✅ รวม keywords (ESD, บรรจุภัณฑ์, ไฟฟ้าสถิต)
+- ✅ CTR ดีขึ้น
+
+### 12.2 Phase 2 สำเร็จ! 🎉
+
+**ทั้งหมด:**
+```
+✅ contact.html — meta description ขยาย
+✅ news.html — meta description ขยาย
+✅ index.html — meta description ย่อให้ดีขึ้น
+```
+
+---
+
 **สร้าง:** 2026-06-13  
-**ทำการแก้ไขล่าสุด:** 2026-06-13 (Step 4 added - PR created, Phase 1 H1 tags)
+**ทำการแก้ไขล่าสุด:** 2026-06-13 (Phase 2 meta descriptions)
