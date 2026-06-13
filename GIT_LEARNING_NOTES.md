@@ -300,5 +300,174 @@ git push origin --tags # ทั้งหมด
 
 ---
 
+## 📌 Part 5: Feature Branch — สาขาสำหรับงาน
+
+### 5.1 Branch คืออะไร?
+
+**Branch** = สาขาของ git ที่คุณทำงานแยกจาก main
+
+**เปรียบเทียบ:**
+```
+main           = ถนนหลัก (production — ต้องปลอดภัย)
+feature/seo    = ถนนข้าง (คุณสามารถสร้างสรรค์ได้)
+```
+
+**ทำไมต้องใช้ branch?**
+
+✅ ไม่กระทบ main (production ปลอดภัย)  
+✅ สามารถทำหลายอย่างพร้อมกันได้  
+✅ สามารถยกเลิกได้ถ้าต้อง  
+✅ ทำให้ git history ชัดเจน
+
+### 5.2 Branch vs Tag
+
+```
+Branch = เส้นทางงาน (เคลื่อนไหวได้ เพิ่ม commit ได้)
+Tag    = ป้ายชื่อ (ชี้ไปที่ commit เดียว ไม่เปลี่ยน)
+```
+
+---
+
+### Step 1: ตรวจสอบ Branch ปัจจุบัน
+
+**คำสั่ง:**
+```bash
+git branch
+```
+
+**ผลลัพธ์:**
+```
+* main
+```
+
+**ความหมาย:**
+- `* main` = อยู่ที่ main branch
+- `*` = เครื่องหมายแสดง branch ปัจจุบัน
+
+**สิ่งที่ได้เรียน:**
+- `git branch` = ดูทั้งหมด + แสดง current branch
+
+---
+
+### Step 2: สร้าง Feature Branch ใหม่
+
+**คำสั่ง:**
+```bash
+git checkout -b feature/seo-improvements
+```
+
+**พูดแบบชาวบ้าน:**
+> "สร้าง branch ใหม่ชื่อ feature/seo-improvements และเข้าไปใน branch นั้น"
+
+**ความหมาย:**
+- `git checkout` = เปลี่ยนไป branch อื่น
+- `-b` = สร้าง branch ใหม่ (b = branch)
+- `feature/seo-improvements` = ชื่อ branch
+
+**ผลลัพธ์:**
+```
+Switched to a new branch 'feature/seo-improvements'
+```
+
+**⚠️ สำคัญ:**
+- ตั้งชื่อ branch ด้วยคำนำหน้า: `feature/`, `bugfix/`, `hotfix/`
+- ใช้ lowercase + hyphen (ไม่ใช้ space)
+
+**สิ่งที่ได้เรียน:**
+- `git checkout -b <name>` = สร้าง branch + เข้าไป
+- Branch ใหม่สร้างจาก commit ปัจจุบัน (HEAD)
+
+---
+
+### Step 3: ตรวจสอบว่าเข้า Branch ที่ถูกต้อง
+
+**คำสั่ง:**
+```bash
+git branch
+```
+
+**ผลลัพธ์:**
+```
+* feature/seo-improvements
+  main
+```
+
+**ความหมาย:**
+- `* feature/seo-improvements` = **ตอนนี้อยู่ที่นี่**
+- `  main` = main branch ยังอยู่ (ไม่ได้ลบ)
+
+**สิ่งที่ได้เรียน:**
+- Branch ก่อนหน้าไม่ได้ลบ สามารถกลับไปได้เสมอ
+- `*` บอกว่า branch ไหนเป็น current
+
+---
+
+### Step 4: ตรวจสอบ Git Status
+
+**คำสั่ง:**
+```bash
+git status
+```
+
+**ผลลัพธ์:**
+```
+On branch feature/seo-improvements
+Changes not staged for commit:
+  modified: .DS_Store
+
+Untracked files:
+  GIT_LEARNING_NOTES.md
+
+no changes added to commit
+```
+
+**ความหมาย:**
+- ✅ ปัจจุบันอยู่ที่ **feature/seo-improvements**
+- ✅ GIT_LEARNING_NOTES.md ยังไม่ commit
+
+**สิ่งที่ได้เรียน:**
+- `git status` = ตรวจสอบ branch + files ที่เปลี่ยน
+- "On branch X" = บอกว่าอยู่ branch ไหน
+
+---
+
+## 📌 Part 6: Branch Management
+
+### Branch Commands
+
+| Task | คำสั่ง | หมายเหตุ |
+|------|--------|---------|
+| ดูทั้งหมด | `git branch` | ท้องถิ่น + current |
+| ดู remote | `git branch -r` | branches บน GitHub |
+| สร้าง + เข้า | `git checkout -b <name>` | สร้างแล้วเปลี่ยนไป |
+| เข้า branch | `git checkout <name>` | เปลี่ยนไปอีก branch |
+| เปลี่ยนชื่อ | `git branch -m <old> <new>` | rename branch |
+| ลบ local | `git branch -d <name>` | ลบจาก local |
+| ลบ remote | `git push origin --delete <name>` | ลบจาก GitHub |
+| Push branch | `git push -u origin <name>` | ส่งไปที่ GitHub |
+
+### Branch Naming Convention
+
+```
+feature/seo-improvements     = ฟีเจอร์ใหม่
+bugfix/header-mobile-issue   = แก้ไข bug
+hotfix/urgent-security-fix   = ด่วน แก้ไข
+refactor/css-cleanup         = ปรับปรุง code
+docs/update-readme           = อัพเดท documentation
+```
+
+---
+
+## 📌 Checklist — Step 2
+
+- ✅ ตรวจสอบ branch ปัจจุบัน (git branch)
+- ✅ สร้าง branch feature/seo-improvements
+- ✅ เข้าไป branch นั้น
+- ✅ ตรวจสอบว่าเข้า branch ที่ถูกต้อง
+- ✅ ตรวจสอบ git status
+- ✅ Commit GIT_LEARNING_NOTES.md
+
+---
+
 **สร้าง:** 2026-06-13  
-**ทำการแก้ไขล่าสุด:** 2026-06-13
+**ทำการแก้ไขล่าสุด:** 2026-06-13 (Step 2 added)
