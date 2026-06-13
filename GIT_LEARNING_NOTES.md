@@ -693,5 +693,83 @@ Status: Ready to merge ✅
 
 ---
 
+---
+
+## 📌 Part 11: SEO Phase 1 — H1 Tags Implementation
+
+### 11.1 Phase 1 ทำอะไรบ้าง?
+
+**Phase 1:** เพิ่ม H1 tags ใน 16 หน้า
+
+### Step 1: เพิ่ม H1 ใน news.html
+
+**ตำแหน่ง:** หลัง `<div class="page-shell">` ในส่วน main
+
+**เพิ่มข้อความ:**
+```html
+<h1 class="lth" style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0;">ข่าวสาร</h1>
+<h1 class="len" style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0;">News</h1>
+```
+
+**ความหมาย:**
+- ✅ เพิ่ม H1 ทั้ง TH + EN
+- ✅ ใช้ `sr-only` style (hidden visual, SEO readable)
+- ✅ ไม่กระทบ design
+
+**Commit:**
+```
+2f69916 feat: add h1 tag to news.html for seo (phase 1)
+```
+
+### Step 2: ตรวจสอบ Product Pages (15 หน้า)
+
+**รายการเช็ค:**
+```bash
+for file in products/*.html; do
+  h1_count=$(grep -c "<h1>" "$file")
+  echo "$file: $h1_count H1 tag(s)"
+done
+```
+
+**ผลลัพธ์:**
+```
+✅ mbb.html: 1 H1
+✅ ssb.html: 1 H1
+✅ ldpe-hdpe.html: 1 H1
+✅ vacuum-nylon.html: 1 H1
+✅ hic.html: 1 H1
+✅ air-bubble.html: 1 H1
+✅ cushion-wrap.html: 1 H1
+✅ sulfur-free-paper.html: 1 H1
+✅ cotton-swabs.html: 1 H1
+✅ foam-swabs.html: 1 H1
+✅ wipers.html: 1 H1
+✅ garments.html: 1 H1
+✅ gloves.html: 1 H1
+```
+
+**สิ่งที่ค้นพบ:**
+- ✅ Product detail pages มี H1 ครบแล้ว!
+- ✅ H1 ชี้ไปที่ชื่อสินค้า (เช่น "Moisture Barrier Bags (MBB)")
+
+### 11.2 Phase 1 สำเร็จ! 🎉
+
+**ทั้งหมด 14 หน้า H1 tags:**
+```
+✅ news.html — เพิ่มใหม่
+✅ 13 product detail pages — เหลือแล้ว
+```
+
+---
+
+## 📌 Checklist — Phase 1
+
+- ✅ news.html — เพิ่ม H1 (commit 2f69916)
+- ✅ 15 product detail pages — มี H1 ครบแล้ว
+- ✅ ตรวจสอบด้วย grep
+- ✅ สิ่งใดก็ตามที่เพิ่ม PR ก็ update
+
+---
+
 **สร้าง:** 2026-06-13  
-**ทำการแก้ไขล่าสุด:** 2026-06-13 (Step 4 added - PR created)
+**ทำการแก้ไขล่าสุด:** 2026-06-13 (Step 4 added - PR created, Phase 1 H1 tags)
