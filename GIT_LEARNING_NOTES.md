@@ -469,5 +469,112 @@ docs/update-readme           = อัพเดท documentation
 
 ---
 
+## 📌 Part 7: Push Branch ไปที่ GitHub
+
+### 7.1 ทำไมต้อง Push Branch?
+
+**Push** = ส่งข้อมูลจาก local ไปยัง GitHub
+
+**ประโยชน์:**
+✅ บันทึกความก้าวหน้า  
+✅ ทีมเห็นได้ (collaboration)  
+✅ เตรียม Pull Request  
+✅ Backup บน GitHub
+
+---
+
+### Step 1: Push Branch ไปที่ GitHub
+
+**คำสั่ง:**
+```bash
+git push -u origin feature/seo-improvements
+```
+
+**พูดแบบชาวบ้าน:**
+> "ส่ง branch feature/seo-improvements ไปยัง GitHub และตั้งให้มันเป็น upstream"
+
+**ความหมาย:**
+- `git push` = ส่งข้อมูลไปที่ GitHub
+- `-u` = upstream (ตั้งค่านี้ไว้ ครั้งต่อไปไม่ต้องพิมพ์)
+- `origin` = ชื่อ remote (GitHub)
+- `feature/seo-improvements` = branch ที่ส่ง
+
+**ผลลัพธ์:**
+```
+Create a pull request for 'feature/seo-improvements' on GitHub by visiting:
+https://github.com/jaturong/sky-united-website/pull/new/feature/seo-improvements
+
+* [new branch]      feature/seo-improvements -> feature/seo-improvements
+branch 'feature/seo-improvements' set up to track 'origin/feature/seo-improvements'.
+```
+
+**ความหมาย:**
+- ✅ Branch ส่งไปที่ GitHub สำเร็จ
+- ✅ GitHub แนะนำให้สร้าง Pull Request
+- ✅ Upstream tracking ตั้งแล้ว (ครั้งต่อไปพิมพ์ `git push` ได้เลย)
+
+**สิ่งที่ได้เรียน:**
+- `git push -u origin <branch>` = ส่งไปครั้งแรก + ตั้ง upstream
+- `-u` = upstream tracking
+- ครั้งต่อไปอาจใช้แค่ `git push` (เข้าใจแล้ว)
+
+---
+
+### Step 2: ตรวจสอบ Branch (Local + Remote)
+
+**คำสั่ง:**
+```bash
+git branch -a
+```
+
+**ผลลัพธ์:**
+```
+* feature/seo-improvements
+  main
+  remotes/origin/feature-seo-improvements
+  remotes/origin/main
+```
+
+**ความหมาย:**
+- `* feature/seo-improvements` = **local branch ปัจจุบัน**
+- `main` = local main
+- `remotes/origin/feature-seo-improvements` = **branch บน GitHub**
+- `remotes/origin/main` = main บน GitHub
+
+**สิ่งที่ได้เรียน:**
+- `git branch -a` = ดูทั้งหมด (local + remote)
+- `remotes/origin/X` = branches บน GitHub
+- ตอนนี้ GitHub เห็น branch ของเรา ✅
+
+---
+
+## 📌 Part 8: Upstream Tracking คืออะไร?
+
+**Upstream** = ความเชื่อมโยงระหว่าง local branch และ remote branch
+
+**ถ้าตั้ง upstream แล้ว:**
+```bash
+git push       # ไม่ต้องระบุ origin/feature/seo-improvements
+git pull       # ดึงข้อมูลจาก upstream โดยอัตโนมัติ
+```
+
+**ถ้าไม่ตั้ง upstream:**
+```bash
+git push origin feature/seo-improvements     # ต้องระบุ origin + branch
+```
+
+**ข้อสำคัญ:** `-u` ตั้ง upstream ไว้เพื่อให้ workflow ง่ายขึ้น
+
+---
+
+## 📌 Checklist — Step 3
+
+- ✅ Push branch ไปที่ GitHub (git push -u origin feature/seo-improvements)
+- ✅ GitHub สร้าง remote branch อัตโนมัติ
+- ✅ Upstream tracking ตั้งแล้ว
+- ✅ ตรวจสอบด้วย git branch -a
+
+---
+
 **สร้าง:** 2026-06-13  
-**ทำการแก้ไขล่าสุด:** 2026-06-13 (Step 2 added)
+**ทำการแก้ไขล่าสุด:** 2026-06-13 (Step 3 added)
