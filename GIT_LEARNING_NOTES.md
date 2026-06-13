@@ -576,5 +576,122 @@ git push origin feature/seo-improvements     # ต้องระบุ origin +
 
 ---
 
+## 📌 Part 9: Pull Request (PR) Workflow
+
+### 9.1 Pull Request คืออะไร?
+
+**Pull Request (PR)** = การขอให้ main branch รับการเปลี่ยนแปลงจาก feature branch
+
+**Workflow:**
+```
+1. Create branch (feature/seo-improvements)     ✅ เสร็จแล้ว
+2. Make changes + commit                        ⏳ ต่อไป
+3. Push to GitHub                               ✅ เสร็จแล้ว
+4. Create Pull Request                          ✅ เสร็จแล้ว
+5. Code Review (optional)
+6. Merge ไปที่ main
+7. Delete feature branch
+8. Tag ใหม่ (v1.1)
+```
+
+### 9.2 ทำไมต้องใช้ PR?
+
+✅ **Review code** — ตรวจสอบก่อน merge  
+✅ **Discussion** — คนอื่นสามารถแสดงความเห็นได้  
+✅ **CI/CD** — GitHub รันเทส โดยอัตโนมัติ  
+✅ **History** — มีบันทึก PR ไว้อ้างอิง
+
+---
+
+### Step 1: สร้าง PR บน GitHub
+
+**วิธี:**
+1. ไปที่ GitHub repository
+2. คลิก "Compare & pull request" button
+3. หรือไป Pull requests tab → "New pull request"
+
+**ตัวอย่าง (เป็นจริง):**
+```
+Title: WIP: SEO Improvements - Phase 1, 2, 3 (H1 tags, meta descriptions, alt text)
+```
+
+**Description:**
+```
+## Purpose
+- Add missing H1 tags (16 pages)
+- Expand meta descriptions (3 pages)
+- Update image alt text (140 images)
+
+## Related Task
+- SEO Optimization Task
+
+## Testing
+- Tested bilingual (TH/EN)
+- Responsive design checked
+- No broken links
+
+## Ready for Review
+- [ ] Phase 1 (H1 tags)
+- [ ] Phase 2 (meta descriptions)
+- [ ] Phase 3 (alt text)
+```
+
+### Step 2: GitHub Information ที่ได้
+
+**ผลลัพธ์:**
+```
+WIP: SEO Improvements - Phase 1, 2, 3 #1
+Status: Ready to merge ✅
+```
+
+**Details:**
+- `#1` = PR number ที่ 1
+- "Ready to merge" = ไม่มี conflicts
+- "jaturong wants to merge 2 commits into main from feature/seo-improvements"
+- Commits: 2 (GIT_LEARNING_NOTES.md changes)
+- Files changed: 1
+
+**ความหมาย:**
+- ✅ PR สร้างสำเร็จ
+- ✅ ยังไม่ได้ merge (รอ approval)
+- ✅ GitHub ตรวจสอบและไม่เห็น conflicts
+
+**สิ่งที่ได้เรียน:**
+- PR ต้องมี title ชัดเจน
+- Description ต้องมี Purpose/Testing/Related Task
+- GitHub แสดง "Ready to merge" ถ้าไม่มี conflicts
+
+---
+
+## 📌 Part 10: PR Status และ Next Steps
+
+### 10.1 PR Status Indicators
+
+| Status | ความหมาย |
+|--------|---------|
+| Open | ✅ PR สร้างแล้ว รอ review/merge |
+| Ready to merge | ✅ ไม่มี conflicts สามารถ merge ได้ |
+| Merged | ✅ feature branch นำเข้า main แล้ว |
+| Closed | ❌ ปิด PR โดยไม่ merge |
+
+### 10.2 ต่อไปต้องทำอะไร?
+
+**ตัวเลือก:**
+
+1. **ทำ SEO improvements ต่อไป** (เพื่อให้ PR มีเนื้อหา)
+   - Phase 1: เพิ่ม H1 tags
+   - Phase 2: Meta descriptions
+   - Phase 3: Alt text
+   - Commit เพิ่มเติม ลงไป feature/seo-improvements
+
+2. **Merge PR ทันที** (ถ้า PR มีเนื้อหาพอ)
+   - คลิก "Merge pull request"
+   - Delete feature branch
+   - Tag v1.1 ใหม่
+
+**ตอนนี้:** PR มี 2 commits บันทึก git learning เท่านั้น
+
+---
+
 **สร้าง:** 2026-06-13  
-**ทำการแก้ไขล่าสุด:** 2026-06-13 (Step 3 added)
+**ทำการแก้ไขล่าสุด:** 2026-06-13 (Step 4 added - PR created)
