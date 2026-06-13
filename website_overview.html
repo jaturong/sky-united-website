@@ -1,0 +1,813 @@
+<!doctype html>
+<html lang="th">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>รายละเอียดเว็บไซต์ — SKY United Industrial</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Noto Sans Thai', sans-serif;
+      background: #f0f4f8;
+      color: #1a2a3a;
+      font-size: 16px;
+      line-height: 1.7;
+    }
+
+    /* ===== LANG TOGGLE ===== */
+    .lang-bar {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      background: #0d2b4e;
+      z-index: 100;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      padding: 8px 24px;
+      gap: 8px;
+    }
+    .lang-bar span { color: #7fb3d3; font-size: 0.8rem; }
+    .lang-btn {
+      padding: 5px 16px;
+      border-radius: 99px;
+      border: 1px solid rgba(255,255,255,0.25);
+      background: transparent;
+      color: #aed6f1;
+      cursor: pointer;
+      font-size: 0.82rem;
+      font-family: inherit;
+      transition: all 0.2s;
+    }
+    .lang-btn.active {
+      background: #2e86c1;
+      border-color: #2e86c1;
+      color: #fff;
+      font-weight: 600;
+    }
+    .lang-btn:hover:not(.active) { background: rgba(255,255,255,0.08); }
+
+    /* ===== HERO ===== */
+    .hero {
+      background: linear-gradient(135deg, #0d2b4e 0%, #1a5276 60%, #2e86c1 100%);
+      color: #fff;
+      padding: 80px 40px 56px;
+      text-align: center;
+      margin-top: 36px;
+    }
+    .hero-eyebrow {
+      font-size: 0.82rem;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: #7fb3d3;
+      margin-bottom: 16px;
+    }
+    .hero h1 { font-size: 2.4rem; font-weight: 700; line-height: 1.3; margin-bottom: 12px; }
+    .hero h1 span { color: #5dade2; }
+    .hero-sub { font-size: 1.05rem; color: #aed6f1; margin-bottom: 32px; }
+    .hero-meta {
+      display: inline-flex;
+      gap: 28px;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.15);
+      border-radius: 12px;
+      padding: 16px 32px;
+      font-size: 0.88rem;
+      color: #d6eaf8;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .hero-meta span strong { color: #fff; display: block; font-size: 0.98rem; }
+
+    /* ===== LAYOUT ===== */
+    .container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+    .section { padding: 56px 0; }
+    .section-alt { background: #fff; }
+    .section-title { font-size: 1.6rem; font-weight: 700; color: #0d2b4e; margin-bottom: 8px; }
+    .section-title span { color: #2e86c1; }
+    .section-lead { font-size: 1.02rem; color: #5d6d7e; margin-bottom: 36px; max-width: 720px; }
+    .divider { width: 52px; height: 4px; background: linear-gradient(90deg,#2e86c1,#5dade2); border-radius: 2px; margin-bottom: 20px; }
+
+    /* ===== STAT GRID ===== */
+    .stat-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 16px; margin-bottom: 40px; }
+    .stat-box {
+      background: linear-gradient(135deg, #0d2b4e, #1a5276);
+      color: #fff;
+      border-radius: 14px;
+      padding: 24px 16px;
+      text-align: center;
+    }
+    .stat-box .num { font-size: 2.4rem; font-weight: 800; color: #5dade2; line-height: 1; margin-bottom: 6px; }
+    .stat-box .label { font-size: 0.82rem; color: #aed6f1; }
+    .stat-box .sub { font-size: 0.75rem; color: #7fb3d3; margin-top: 3px; }
+
+    /* ===== CARDS ===== */
+    .card-grid { display: grid; gap: 20px; }
+    .card-grid-2 { grid-template-columns: repeat(2, 1fr); }
+    .card-grid-3 { grid-template-columns: repeat(3, 1fr); }
+    .card {
+      background: #fff;
+      border-radius: 14px;
+      padding: 26px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+      border-top: 4px solid #2e86c1;
+    }
+    .card-icon { font-size: 1.8rem; margin-bottom: 10px; }
+    .card h3 { font-size: 1rem; font-weight: 700; color: #0d2b4e; margin-bottom: 8px; }
+    .card p { font-size: 0.9rem; color: #5d6d7e; line-height: 1.65; }
+
+    /* ===== SITE MAP TREE ===== */
+    .sitemap-wrap {
+      background: #fff;
+      border-radius: 16px;
+      padding: 36px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+    }
+    .sm-root {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 12px;
+    }
+    .sm-node {
+      background: linear-gradient(135deg, #0d2b4e, #1a5276);
+      color: #fff;
+      border-radius: 10px;
+      padding: 10px 22px;
+      font-size: 0.9rem;
+      font-weight: 700;
+      text-align: center;
+    }
+    .sm-node.home { background: linear-gradient(135deg, #1a5276, #2e86c1); font-size: 1rem; padding: 12px 28px; }
+    .sm-connector {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 0;
+    }
+    .sm-connector-line { width: 2px; height: 24px; background: #aed6f1; }
+    .sm-level {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
+      position: relative;
+      padding-top: 12px;
+      border-top: 2px solid #aed6f1;
+      margin-top: 0;
+    }
+    .sm-branch { text-align: center; }
+    .sm-branch-line { width: 2px; height: 16px; background: #aed6f1; margin: 0 auto; }
+    .sm-node.main-page { background: #2e86c1; font-size: 0.85rem; padding: 8px 16px; }
+    .sm-sub-list { margin-top: 10px; display: flex; flex-direction: column; gap: 6px; }
+    .sm-sub-item {
+      background: #eaf4fb;
+      border: 1px solid #aed6f1;
+      border-radius: 6px;
+      padding: 5px 10px;
+      font-size: 0.75rem;
+      color: #1a5276;
+      white-space: nowrap;
+    }
+
+    /* ===== PAGE DETAIL CARDS ===== */
+    .page-card {
+      background: #fff;
+      border-radius: 14px;
+      padding: 24px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+      border-left: 5px solid #2e86c1;
+    }
+    .page-card-header { display: flex; align-items: center; gap: 12px; margin-bottom: 12px; }
+    .page-card-icon { font-size: 1.6rem; }
+    .page-card-title { font-size: 1rem; font-weight: 700; color: #0d2b4e; }
+    .page-card-url { font-size: 0.78rem; color: #7fb3d3; font-family: monospace; }
+    .page-card p { font-size: 0.88rem; color: #5d6d7e; line-height: 1.65; margin-bottom: 10px; }
+    .tag-row { display: flex; flex-wrap: wrap; gap: 6px; }
+    .tag {
+      display: inline-block;
+      padding: 3px 10px;
+      border-radius: 99px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      background: #d6eaf8;
+      color: #1a5276;
+    }
+    .tag.green { background: #d5f5e3; color: #1e8449; }
+    .tag.orange { background: #fdebd0; color: #a04000; }
+
+    /* ===== PRODUCT GRID ===== */
+    .prod-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+    .prod-item {
+      background: #fff;
+      border-radius: 12px;
+      padding: 18px 14px;
+      text-align: center;
+      box-shadow: 0 1px 8px rgba(0,0,0,0.06);
+      border-bottom: 3px solid #2e86c1;
+    }
+    .prod-item .pi-icon { font-size: 1.6rem; margin-bottom: 8px; }
+    .prod-item .pi-en { font-size: 0.82rem; font-weight: 700; color: #0d2b4e; line-height: 1.4; margin-bottom: 4px; }
+    .prod-item .pi-th { font-size: 0.75rem; color: #7fb3d3; line-height: 1.4; }
+
+    /* ===== TECH TABLE ===== */
+    .tech-table { width: 100%; border-collapse: collapse; font-size: 0.9rem; }
+    .tech-table th { background: #0d2b4e; color: #fff; padding: 11px 16px; text-align: left; font-weight: 600; }
+    .tech-table td { padding: 11px 16px; border-bottom: 1px solid #e8edf2; vertical-align: top; }
+    .tech-table tr:nth-child(even) td { background: #f8fafc; }
+    .badge { display: inline-block; padding: 3px 10px; border-radius: 99px; font-size: 0.78rem; font-weight: 600; }
+    .badge-blue { background: #d6eaf8; color: #1a5276; }
+    .badge-green { background: #d5f5e3; color: #1e8449; }
+    .badge-purple { background: #e8daef; color: #6c3483; }
+
+    /* ===== COMPANY STRIP ===== */
+    .company-strip {
+      background: linear-gradient(135deg, #1a5276, #2e86c1);
+      border-radius: 16px;
+      padding: 36px;
+      color: #fff;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 32px;
+    }
+    .company-strip h3 { font-size: 1.1rem; font-weight: 700; margin-bottom: 14px; color: #aed6f1; }
+    .cs-item { display: flex; gap: 10px; margin-bottom: 10px; font-size: 0.9rem; align-items: flex-start; }
+    .cs-label { color: #aed6f1; min-width: 80px; flex-shrink: 0; }
+    .cs-val { color: #fff; font-weight: 500; }
+    .why-list { list-style: none; }
+    .why-list li { font-size: 0.88rem; color: #d6eaf8; padding: 4px 0; border-bottom: 1px solid rgba(255,255,255,0.1); }
+    .why-list li::before { content: "✅ "; }
+
+    /* ===== FOOTER ===== */
+    .report-footer {
+      background: #0d2b4e;
+      color: #7fb3d3;
+      text-align: center;
+      padding: 32px;
+      font-size: 0.85rem;
+    }
+    .report-footer strong { color: #fff; }
+
+    /* ===== HIDDEN ===== */
+    [data-lang] { display: block; }
+    .lang-hidden { display: none !important; }
+
+    @media (max-width: 900px) {
+      .stat-grid { grid-template-columns: repeat(3, 1fr); }
+      .prod-grid { grid-template-columns: repeat(2, 1fr); }
+      .card-grid-3 { grid-template-columns: 1fr 1fr; }
+      .company-strip { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 640px) {
+      .hero h1 { font-size: 1.6rem; }
+      .card-grid-2, .card-grid-3 { grid-template-columns: 1fr; }
+      .stat-grid { grid-template-columns: repeat(2, 1fr); }
+      .prod-grid { grid-template-columns: repeat(2, 1fr); }
+      .hero-meta { gap: 16px; padding: 14px 20px; }
+      .sm-level { gap: 8px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ===== LANG BAR ===== -->
+<div class="lang-bar">
+  <span>ภาษา / Language:</span>
+  <button class="lang-btn active" onclick="setLang('th')" id="btn-th">🇹🇭 ภาษาไทย</button>
+  <button class="lang-btn" onclick="setLang('en')" id="btn-en">🇬🇧 English</button>
+</div>
+
+
+<!-- ===== HERO ===== -->
+<div class="hero">
+  <div class="hero-eyebrow">SKY United Industrial (Thailand) Co., Ltd.</div>
+
+  <h1 data-th>รายละเอียด<span>เว็บไซต์บริษัท</span></h1>
+  <h1 data-en class="lang-hidden">Website <span>Overview Report</span></h1>
+
+  <p class="hero-sub" data-th>โครงสร้าง รายละเอียดหน้า และข้อมูลบริษัทครบถ้วน</p>
+  <p class="hero-sub lang-hidden" data-en>Website structure, page details, and company information</p>
+
+  <div class="hero-meta">
+    <span><strong>www.skyunitedth.com</strong><span data-th>เว็บไซต์บริษัท</span><span data-en class="lang-hidden">Company Website</span></span>
+    <span><strong>18 <span data-th>หน้า</span><span data-en class="lang-hidden">Pages</span></strong><span data-th>ทั้งหมด</span><span data-en class="lang-hidden">Total</span></span>
+    <span><strong>2 <span data-th>ภาษา</span><span data-en class="lang-hidden">Languages</span></strong>TH / EN</span>
+    <span><strong><span data-th>เวอร์ชัน</span><span data-en class="lang-hidden">Version</span> 1.1</strong><span data-th>ปัจจุบัน</span><span data-en class="lang-hidden">Current</span></span>
+  </div>
+</div>
+
+
+<!-- ===== ข้อมูลบริษัท ===== -->
+<div class="section section-alt">
+  <div class="container">
+    <div class="divider"></div>
+    <h2 class="section-title" data-th>ข้อมูล<span>บริษัท</span></h2>
+    <h2 class="section-title lang-hidden" data-en>Company <span>Information</span></h2>
+    <p class="section-lead" data-th>ข้อมูลหลักของบริษัท สกาย ยูไนเต็ด อินดัสเทรียล (ประเทศไทย) จำกัด</p>
+    <p class="section-lead lang-hidden" data-en>Key information about SKY United Industrial (Thailand) Co., Ltd.</p>
+
+    <div class="company-strip">
+      <div>
+        <h3 data-th>📋 ข้อมูลติดต่อ</h3>
+        <h3 class="lang-hidden" data-en>📋 Contact Details</h3>
+        <div class="cs-item"><span class="cs-label" data-th>บริษัท</span><span class="cs-label lang-hidden" data-en>Company</span><span class="cs-val" data-th>บริษัท สกาย ยูไนเต็ด อินดัสเทรียล (ประเทศไทย) จำกัด</span><span class="cs-val lang-hidden" data-en>SKY United Industrial (Thailand) Co., Ltd.</span></div>
+        <div class="cs-item"><span class="cs-label" data-th>ที่ตั้ง</span><span class="cs-label lang-hidden" data-en>Location</span><span class="cs-val" data-th>จังหวัดพระนครศรีอยุธยา ประเทศไทย พื้นที่ 13.8 ไร่</span><span class="cs-val lang-hidden" data-en>Ayutthaya Province, Thailand — 13.8 rai production area</span></div>
+        <div class="cs-item"><span class="cs-label">Email</span><span class="cs-val">sales@skyunitedth.com</span></div>
+        <div class="cs-item"><span class="cs-label" data-th>โทรศัพท์</span><span class="cs-label lang-hidden" data-en>Tel</span><span class="cs-val">099-653-6354</span></div>
+        <div class="cs-item"><span class="cs-label">Website</span><span class="cs-val">www.skyunitedth.com</span></div>
+        <div class="cs-item"><span class="cs-label" data-th>ตลาด</span><span class="cs-label lang-hidden" data-en>Market</span><span class="cs-val" data-th>ไทย + เอเชียตะวันออกเฉียงใต้ (B2B)</span><span class="cs-val lang-hidden" data-en>Thailand + Southeast Asia (B2B)</span></div>
+      </div>
+      <div>
+        <h3 data-th>⭐ จุดแข็งของบริษัท</h3>
+        <h3 class="lang-hidden" data-en>⭐ Company Strengths</h3>
+        <ul class="why-list" data-th>
+          <li>ผู้นำการผลิตบรรจุภัณฑ์ ESD ในประเทศไทย</li>
+          <li>ผลิตในห้องคลีนรูม (Cleanroom Manufacturing)</li>
+          <li>มาตรฐานคุณภาพระดับอุตสาหกรรมเซมิคอนดักเตอร์</li>
+          <li>ระบบควบคุมคุณภาพ ISO Standard</li>
+          <li>Lead Time รวดเร็ว 5–7 วัน</li>
+          <li>ส่งออกทั่วเอเชียตะวันออกเฉียงใต้</li>
+          <li>รับสั่งทำ Custom Packaging</li>
+          <li>จัดส่งตรงจากโรงงาน (Factory Direct B2B)</li>
+        </ul>
+        <ul class="why-list lang-hidden" data-en>
+          <li>Leading ESD packaging manufacturer in Thailand</li>
+          <li>Cleanroom Manufacturing System</li>
+          <li>Semiconductor-grade quality standards</li>
+          <li>ISO Standard Quality Control</li>
+          <li>Fast Lead Time: 5–7 days</li>
+          <li>Export across Southeast Asia</li>
+          <li>Custom Packaging available</li>
+          <li>Factory Direct B2B Supply</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ===== ตัวเลขเว็บไซต์ ===== -->
+<div class="section">
+  <div class="container">
+    <div class="divider"></div>
+    <h2 class="section-title" data-th>เว็บไซต์<span>ในตัวเลข</span></h2>
+    <h2 class="section-title lang-hidden" data-en>Website <span>at a Glance</span></h2>
+
+    <div class="stat-grid">
+      <div class="stat-box">
+        <div class="num">18</div>
+        <div class="label" data-th>หน้าทั้งหมด</div>
+        <div class="label lang-hidden" data-en>Total Pages</div>
+        <div class="sub" data-th>5 หน้าหลัก + 13 สินค้า</div>
+        <div class="sub lang-hidden" data-en>5 main + 13 products</div>
+      </div>
+      <div class="stat-box">
+        <div class="num">2</div>
+        <div class="label" data-th>ภาษา</div>
+        <div class="label lang-hidden" data-en>Languages</div>
+        <div class="sub">Thai / English</div>
+      </div>
+      <div class="stat-box">
+        <div class="num">13</div>
+        <div class="label" data-th>หน้าสินค้า</div>
+        <div class="label lang-hidden" data-en>Product Pages</div>
+        <div class="sub" data-th>8 ESD + 5 Cleanroom</div>
+        <div class="sub lang-hidden" data-en>8 ESD + 5 Cleanroom</div>
+      </div>
+      <div class="stat-box">
+        <div class="num">121</div>
+        <div class="label" data-th>รูปภาพ</div>
+        <div class="label lang-hidden" data-en>Images</div>
+        <div class="sub" data-th>สินค้า, บริษัท, ใบรับรอง</div>
+        <div class="sub lang-hidden" data-en>Products, company, certs</div>
+      </div>
+      <div class="stat-box">
+        <div class="num">5</div>
+        <div class="label" data-th>CSS Files</div>
+        <div class="label lang-hidden" data-en>CSS Files</div>
+        <div class="sub" data-th>ระบบ Design ครบชุด</div>
+        <div class="sub lang-hidden" data-en>Complete design system</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ===== โครงสร้างเว็บไซต์ ===== -->
+<div class="section section-alt">
+  <div class="container">
+    <div class="divider"></div>
+    <h2 class="section-title" data-th>โครงสร้าง<span>เว็บไซต์</span></h2>
+    <h2 class="section-title lang-hidden" data-en>Website <span>Structure</span></h2>
+    <p class="section-lead" data-th>ภาพรวมโครงสร้างทุกหน้าและความสัมพันธ์ระหว่างกัน</p>
+    <p class="section-lead lang-hidden" data-en>Overview of all pages and their relationships</p>
+
+    <div class="sitemap-wrap">
+      <!-- Root -->
+      <div class="sm-root">
+        <div class="sm-node" style="background:linear-gradient(135deg,#1e8449,#27ae60); padding:12px 28px; font-size:1rem;">
+          www.skyunitedth.com
+        </div>
+      </div>
+      <div class="sm-connector"><div class="sm-connector-line"></div></div>
+
+      <!-- Level 1: 5 main pages -->
+      <div class="sm-level">
+        <!-- Home -->
+        <div class="sm-branch">
+          <div class="sm-node main-page" data-th>🏠 หน้าหลัก<br><small style="font-weight:400;color:#aed6f1;">index.html</small></div>
+          <div class="sm-node main-page lang-hidden" data-en>🏠 Home<br><small style="font-weight:400;color:#aed6f1;">index.html</small></div>
+        </div>
+        <!-- About -->
+        <div class="sm-branch">
+          <div class="sm-node main-page" data-th>🏭 เกี่ยวกับเรา<br><small style="font-weight:400;color:#aed6f1;">about.html</small></div>
+          <div class="sm-node main-page lang-hidden" data-en>🏭 About Us<br><small style="font-weight:400;color:#aed6f1;">about.html</small></div>
+        </div>
+        <!-- Products -->
+        <div class="sm-branch">
+          <div class="sm-node main-page" data-th>📦 ผลิตภัณฑ์<br><small style="font-weight:400;color:#aed6f1;">products.html</small></div>
+          <div class="sm-node main-page lang-hidden" data-en>📦 Products<br><small style="font-weight:400;color:#aed6f1;">products.html</small></div>
+          <div class="sm-branch-line"></div>
+          <div class="sm-sub-list">
+            <div class="sm-sub-item">products/mbb.html</div>
+            <div class="sm-sub-item">products/ssb.html</div>
+            <div class="sm-sub-item">products/ldpe-hdpe.html</div>
+            <div class="sm-sub-item">products/vacuum-nylon.html</div>
+            <div class="sm-sub-item">products/hic.html</div>
+            <div class="sm-sub-item">products/air-bubble.html</div>
+            <div class="sm-sub-item">products/cushion-wrap.html</div>
+            <div class="sm-sub-item">products/sulfur-free-paper.html</div>
+            <div class="sm-sub-item">products/cotton-swabs.html</div>
+            <div class="sm-sub-item">products/foam-swabs.html</div>
+            <div class="sm-sub-item">products/wipers.html</div>
+            <div class="sm-sub-item">products/garments.html</div>
+            <div class="sm-sub-item">products/gloves.html</div>
+          </div>
+        </div>
+        <!-- News -->
+        <div class="sm-branch">
+          <div class="sm-node main-page" data-th>📰 ข่าวสาร<br><small style="font-weight:400;color:#aed6f1;">news.html</small></div>
+          <div class="sm-node main-page lang-hidden" data-en>📰 News<br><small style="font-weight:400;color:#aed6f1;">news.html</small></div>
+        </div>
+        <!-- Contact -->
+        <div class="sm-branch">
+          <div class="sm-node main-page" data-th>📞 ติดต่อเรา<br><small style="font-weight:400;color:#aed6f1;">contact.html</small></div>
+          <div class="sm-node main-page lang-hidden" data-en>📞 Contact<br><small style="font-weight:400;color:#aed6f1;">contact.html</small></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ===== หน้าหลัก 5 หน้า ===== -->
+<div class="section">
+  <div class="container">
+    <div class="divider"></div>
+    <h2 class="section-title" data-th>รายละเอียด<span>หน้าหลัก 5 หน้า</span></h2>
+    <h2 class="section-title lang-hidden" data-en>Main Pages <span>Detail (5 Pages)</span></h2>
+    <p class="section-lead" data-th>แต่ละหน้ามีวัตถุประสงค์และเนื้อหาที่แตกต่างกัน</p>
+    <p class="section-lead lang-hidden" data-en>Each page serves a distinct purpose and audience</p>
+
+    <div style="display:grid; gap:16px;">
+
+      <div class="page-card">
+        <div class="page-card-header">
+          <div class="page-card-icon">🏠</div>
+          <div>
+            <div class="page-card-title" data-th>หน้าหลัก (Homepage)</div>
+            <div class="page-card-title lang-hidden" data-en>Homepage</div>
+            <div class="page-card-url">index.html</div>
+          </div>
+        </div>
+        <p data-th>หน้าแรกของเว็บไซต์ นำเสนอภาพรวมบริษัทและผลิตภัณฑ์ ประกอบด้วย Hero Section พร้อม 3D Animation, รายการผลิตภัณฑ์แยก 2 หมวด (ESD / Cleanroom), เหตุผล 9 ข้อที่ควรเลือกบริษัท, และบทความ 3 ชิ้นเกี่ยวกับบรรจุภัณฑ์</p>
+        <p class="lang-hidden" data-en>The main entry point of the website. Features a 3D animated Hero section, product overview split into 2 categories (ESD / Cleanroom), 9 reasons to choose SKY United, and 3 industry articles on packaging.</p>
+        <div class="tag-row">
+          <span class="tag">Hero 3D Animation</span>
+          <span class="tag">Product Overview</span>
+          <span class="tag green" data-th>9 เหตุผล</span>
+          <span class="tag green lang-hidden" data-en>9 Reasons</span>
+          <span class="tag">3 Articles</span>
+          <span class="tag orange">TH / EN</span>
+        </div>
+      </div>
+
+      <div class="page-card" style="border-left-color:#27ae60;">
+        <div class="page-card-header">
+          <div class="page-card-icon">🏭</div>
+          <div>
+            <div class="page-card-title" data-th>เกี่ยวกับเรา</div>
+            <div class="page-card-title lang-hidden" data-en>About Us</div>
+            <div class="page-card-url">about.html</div>
+          </div>
+        </div>
+        <p data-th>แนะนำบริษัทอย่างละเอียด ประกอบด้วยประวัติและจุดยืนของบริษัทในฐานะผู้ผลิต ESD ชั้นนำ, ข้อมูลโรงงานที่อยุธยา (13.8 ไร่), Gallery รูปภาพโรงงานและสินค้า, และส่วนแสดงใบรับรองมาตรฐาน</p>
+        <p class="lang-hidden" data-en>Detailed company introduction including company background as a leading ESD manufacturer, factory information in Ayutthaya (13.8 rai), factory and product gallery, and certification/accreditation display.</p>
+        <div class="tag-row">
+          <span class="tag" data-th>ประวัติบริษัท</span>
+          <span class="tag lang-hidden" data-en>Company History</span>
+          <span class="tag" data-th>ข้อมูลโรงงาน</span>
+          <span class="tag lang-hidden" data-en>Factory Info</span>
+          <span class="tag green">Gallery</span>
+          <span class="tag green" data-th>ใบรับรอง</span>
+          <span class="tag green lang-hidden" data-en>Certificates</span>
+          <span class="tag orange">TH / EN</span>
+        </div>
+      </div>
+
+      <div class="page-card" style="border-left-color:#e67e22;">
+        <div class="page-card-header">
+          <div class="page-card-icon">📦</div>
+          <div>
+            <div class="page-card-title" data-th>ผลิตภัณฑ์</div>
+            <div class="page-card-title lang-hidden" data-en>Products</div>
+            <div class="page-card-url">products.html</div>
+          </div>
+        </div>
+        <p data-th>หน้าแคตตาล็อกสินค้าทั้งหมด แบ่งเป็น 2 หมวดหลัก: ESD Packaging Solutions (8 รายการ) และ Cleanroom Consumables (5 รายการ) พร้อม Carousel แสดงรูปภาพสินค้า และปุ่ม "อ่านต่อ" เชื่อมไปยังหน้าสินค้าแต่ละรายการ</p>
+        <p class="lang-hidden" data-en>Product catalogue page divided into 2 main categories: ESD Packaging Solutions (8 items) and Cleanroom Consumables (5 items), with image carousels and "Read More" links to individual product pages.</p>
+        <div class="tag-row">
+          <span class="tag" data-th>ESD Packaging 8 รายการ</span>
+          <span class="tag lang-hidden" data-en>ESD Packaging 8 items</span>
+          <span class="tag" data-th>Cleanroom 5 รายการ</span>
+          <span class="tag lang-hidden" data-en>Cleanroom 5 items</span>
+          <span class="tag green">Carousel</span>
+          <span class="tag orange">TH / EN</span>
+        </div>
+      </div>
+
+      <div class="page-card" style="border-left-color:#8e44ad;">
+        <div class="page-card-header">
+          <div class="page-card-icon">📰</div>
+          <div>
+            <div class="page-card-title" data-th>ข่าวสาร / บทความ</div>
+            <div class="page-card-title lang-hidden" data-en>News & Articles</div>
+            <div class="page-card-url">news.html</div>
+          </div>
+        </div>
+        <p data-th>หน้าข่าวสารและบทความ ประกอบด้วยบทความด้านบรรจุภัณฑ์ 3 ชิ้น, Section "ทำไมต้องเลือกเรา" พร้อมรูปภาพโรงงาน, และ Gallery รูปภาพกิจกรรมและสินค้า</p>
+        <p class="lang-hidden" data-en>News and articles page featuring 3 packaging industry articles, "Why Choose Us" section with factory imagery, and a photo gallery of activities and products.</p>
+        <div class="tag-row">
+          <span class="tag" data-th>3 บทความ</span>
+          <span class="tag lang-hidden" data-en>3 Articles</span>
+          <span class="tag" data-th>Why Choose Us</span>
+          <span class="tag">Gallery</span>
+          <span class="tag orange">TH / EN</span>
+        </div>
+      </div>
+
+      <div class="page-card" style="border-left-color:#2e86c1;">
+        <div class="page-card-header">
+          <div class="page-card-icon">📞</div>
+          <div>
+            <div class="page-card-title" data-th>ติดต่อเรา</div>
+            <div class="page-card-title lang-hidden" data-en>Contact Us</div>
+            <div class="page-card-url">contact.html</div>
+          </div>
+        </div>
+        <p data-th>หน้าข้อมูลติดต่อ Layout 2 คอลัมน์: ซ้ายเป็นข้อมูลติดต่อครบถ้วน (อีเมล, โทรศัพท์, เว็บไซต์, ที่อยู่), ขวาเป็น Google Maps แบบ Embed แสดงตำแหน่งโรงงาน พร้อมรูปภาพโรงงาน Full-width</p>
+        <p class="lang-hidden" data-en>Contact information page with 2-column layout: left shows complete contact details (email, phone, website, address), right shows embedded Google Maps with factory location. Full-width factory image at bottom.</p>
+        <div class="tag-row">
+          <span class="tag" data-th>ข้อมูลติดต่อ</span>
+          <span class="tag lang-hidden" data-en>Contact Info</span>
+          <span class="tag">Google Maps</span>
+          <span class="tag green" data-th>รูปโรงงาน</span>
+          <span class="tag green lang-hidden" data-en>Factory Image</span>
+          <span class="tag orange">TH / EN</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+<!-- ===== หน้าสินค้า ===== -->
+<div class="section section-alt">
+  <div class="container">
+    <div class="divider"></div>
+    <h2 class="section-title" data-th>หน้าสินค้า<span>ทั้ง 13 รายการ</span></h2>
+    <h2 class="section-title lang-hidden" data-en>Product Pages <span>(13 Items)</span></h2>
+    <p class="section-lead" data-th>แต่ละสินค้ามีหน้าแยกเป็นของตัวเอง พร้อมข้อมูลครบถ้วน ทั้งภาษาไทยและอังกฤษ</p>
+    <p class="section-lead lang-hidden" data-en>Each product has its own dedicated page with full details in both Thai and English.</p>
+
+    <!-- ESD -->
+    <h3 style="font-size:1rem; font-weight:700; color:#1a5276; margin-bottom:14px; padding-left:4px;" data-th>🛡️ ESD Packaging Solutions (8 รายการ)</h3>
+    <h3 style="font-size:1rem; font-weight:700; color:#1a5276; margin-bottom:14px; padding-left:4px; display:none;" data-en class="lang-hidden">🛡️ ESD Packaging Solutions (8 Items)</h3>
+    <div class="prod-grid" style="margin-bottom:28px;">
+      <div class="prod-item">
+        <div class="pi-icon">🧱</div>
+        <div class="pi-en">Moisture Barrier Bags (MBB)</div>
+        <div class="pi-th" data-th>ถุงป้องกันความชื้นและไฟฟ้าสถิต</div>
+        <div class="pi-th lang-hidden" data-en>Anti-moisture & ESD protection bags</div>
+      </div>
+      <div class="prod-item">
+        <div class="pi-icon">⚡</div>
+        <div class="pi-en">Static Shielding Bags (SSB)</div>
+        <div class="pi-th" data-th>ถุงป้องกันไฟฟ้าสถิต (ถุงชีลด์)</div>
+        <div class="pi-th lang-hidden" data-en>ESD shielding bags</div>
+      </div>
+      <div class="prod-item">
+        <div class="pi-icon">🧴</div>
+        <div class="pi-en">Cleanroom LDPE & HDPE Bags</div>
+        <div class="pi-th" data-th>ถุงพลาสติกสำหรับห้องคลีนรูม</div>
+        <div class="pi-th lang-hidden" data-en>Cleanroom-grade plastic bags</div>
+      </div>
+      <div class="prod-item">
+        <div class="pi-icon">🔵</div>
+        <div class="pi-en">Vacuum Nylon Packaging Bags</div>
+        <div class="pi-th" data-th>ถุงไนลอนสูญญากาศ</div>
+        <div class="pi-th lang-hidden" data-en>Vacuum-seal nylon bags</div>
+      </div>
+      <div class="prod-item">
+        <div class="pi-icon">💧</div>
+        <div class="pi-en">Humidity Indicator Cards (HIC)</div>
+        <div class="pi-th" data-th>การ์ดวัดระดับความชื้น</div>
+        <div class="pi-th lang-hidden" data-en>Moisture level indicator cards</div>
+      </div>
+      <div class="prod-item">
+        <div class="pi-icon">🫧</div>
+        <div class="pi-en">Anti-Static Air Bubble Packaging</div>
+        <div class="pi-th" data-th>พลาสติกกันกระแทก ESD</div>
+        <div class="pi-th lang-hidden" data-en>ESD-safe bubble wrap</div>
+      </div>
+      <div class="prod-item">
+        <div class="pi-icon">🎁</div>
+        <div class="pi-en">Protective Cushioning Wrap</div>
+        <div class="pi-th" data-th>วัสดุห่อหุ้มกันกระแทก</div>
+        <div class="pi-th lang-hidden" data-en>Cushioning protective wrap</div>
+      </div>
+      <div class="prod-item">
+        <div class="pi-icon">📄</div>
+        <div class="pi-en">Sulfur-Free Paper</div>
+        <div class="pi-th" data-th>กระดาษปราศจากซัลเฟอร์</div>
+        <div class="pi-th lang-hidden" data-en>Sulfur-free paper for electronics</div>
+      </div>
+    </div>
+
+    <!-- Cleanroom -->
+    <h3 style="font-size:1rem; font-weight:700; color:#1a5276; margin-bottom:14px; padding-left:4px;" data-th>🧪 Cleanroom Consumables (5 รายการ)</h3>
+    <h3 style="font-size:1rem; font-weight:700; color:#1a5276; margin-bottom:14px; padding-left:4px; display:none;" class="lang-hidden" data-en>🧪 Cleanroom Consumables (5 Items)</h3>
+    <div class="prod-grid" style="grid-template-columns: repeat(5, 1fr);">
+      <div class="prod-item" style="border-bottom-color:#27ae60;">
+        <div class="pi-icon">🪥</div>
+        <div class="pi-en">Cleanroom Cotton Swabs</div>
+        <div class="pi-th" data-th>ก้านสำลีสำหรับคลีนรูม</div>
+        <div class="pi-th lang-hidden" data-en>Cleanroom cotton swabs</div>
+      </div>
+      <div class="prod-item" style="border-bottom-color:#27ae60;">
+        <div class="pi-icon">🧽</div>
+        <div class="pi-en">Cleanroom Foam Swabs</div>
+        <div class="pi-th" data-th>ก้านโฟมสำหรับคลีนรูม</div>
+        <div class="pi-th lang-hidden" data-en>Cleanroom foam swabs</div>
+      </div>
+      <div class="prod-item" style="border-bottom-color:#27ae60;">
+        <div class="pi-icon">🧻</div>
+        <div class="pi-en">Anti-Static Cleanroom Wipers</div>
+        <div class="pi-th" data-th>ผ้าเช็ดป้องกันไฟฟ้าสถิต</div>
+        <div class="pi-th lang-hidden" data-en>Anti-static cleanroom wipers</div>
+      </div>
+      <div class="prod-item" style="border-bottom-color:#27ae60;">
+        <div class="pi-icon">👔</div>
+        <div class="pi-en">Cleanroom Garments & Suits</div>
+        <div class="pi-th" data-th>ชุดสำหรับห้องคลีนรูม</div>
+        <div class="pi-th lang-hidden" data-en>Cleanroom garments & suits</div>
+      </div>
+      <div class="prod-item" style="border-bottom-color:#27ae60;">
+        <div class="pi-icon">🧤</div>
+        <div class="pi-en">Anti-Static & Latex Gloves</div>
+        <div class="pi-th" data-th>ถุงมือป้องกันไฟฟ้าสถิต</div>
+        <div class="pi-th lang-hidden" data-en>Anti-static & latex gloves</div>
+      </div>
+    </div>
+
+    <!-- Page structure note -->
+    <div style="background:#f0f7ff; border-radius:12px; padding:20px 24px; margin-top:24px; border-left:4px solid #2e86c1;">
+      <p style="font-size:0.9rem; color:#1a5276; font-weight:600; margin-bottom:6px;" data-th>📋 โครงสร้างหน้าสินค้าแต่ละรายการ (เหมือนกันทุกหน้า)</p>
+      <p style="font-size:0.9rem; color:#1a5276; font-weight:600; margin-bottom:6px; display:none;" class="lang-hidden" data-en>📋 Individual Product Page Structure (same for all)</p>
+      <div class="tag-row">
+        <span class="tag" data-th>ชื่อสินค้า + ชื่อไทย</span>
+        <span class="tag lang-hidden" data-en>Product Name (EN + TH)</span>
+        <span class="tag" data-th>คำอธิบายสินค้า</span>
+        <span class="tag lang-hidden" data-en>Product Description</span>
+        <span class="tag" data-th>รูปภาพสินค้า Gallery</span>
+        <span class="tag lang-hidden" data-en>Product Gallery</span>
+        <span class="tag green" data-th>ตาราง Key Features</span>
+        <span class="tag green lang-hidden" data-en>Key Features Table</span>
+        <span class="tag green" data-th>ปุ่มกลับผลิตภัณฑ์</span>
+        <span class="tag green lang-hidden" data-en>Back to Products button</span>
+        <span class="tag orange">TH / EN</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ===== Tech Stack ===== -->
+<div class="section">
+  <div class="container">
+    <div class="divider"></div>
+    <h2 class="section-title" data-th>เทคโนโลยี<span>ที่ใช้พัฒนา</span></h2>
+    <h2 class="section-title lang-hidden" data-en>Technology <span>Stack</span></h2>
+    <p class="section-lead" data-th>เว็บไซต์พัฒนาด้วย Vanilla HTML/CSS/JS ไม่พึ่งพา Framework เพื่อความเร็วและง่ายต่อการดูแล</p>
+    <p class="section-lead lang-hidden" data-en>Built with pure HTML/CSS/JS — no heavy frameworks, ensuring fast load times and easy maintenance.</p>
+
+    <table class="tech-table">
+      <thead>
+        <tr>
+          <th data-th>ส่วนประกอบ</th>
+          <th class="lang-hidden" data-en>Component</th>
+          <th data-th>รายละเอียด</th>
+          <th class="lang-hidden" data-en>Details</th>
+          <th data-th>หมายเหตุ</th>
+          <th class="lang-hidden" data-en>Note</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong data-th>ภาษาหลัก</strong><strong class="lang-hidden" data-en>Core Language</strong></td>
+          <td>HTML5, CSS3, JavaScript (ES6+)</td>
+          <td><span class="badge badge-green" data-th>ไม่ใช้ Framework</span><span class="badge badge-green lang-hidden" data-en>No Framework</span></td>
+        </tr>
+        <tr>
+          <td><strong data-th>ระบบ 2 ภาษา</strong><strong class="lang-hidden" data-en>Bilingual System</strong></td>
+          <td>i18n.js + lang/th.json + lang/en.json</td>
+          <td><span class="badge badge-blue" data-th>สลับภาษาได้ทันที</span><span class="badge badge-blue lang-hidden" data-en>Instant language switch</span></td>
+        </tr>
+        <tr>
+          <td><strong>CSS</strong></td>
+          <td>base.css, layout.css, components.css, pages.css, animations.css</td>
+          <td><span class="badge badge-purple" data-th>ระบบ Design แยกชั้น</span><span class="badge badge-purple lang-hidden" data-en>Layered design system</span></td>
+        </tr>
+        <tr>
+          <td><strong data-th>Responsive</strong><strong class="lang-hidden" data-en>Responsive</strong></td>
+          <td data-th>Breakpoints: 980px (Tablet), 640px (Mobile)</td>
+          <td data-th><span class="badge badge-green">รองรับทุกอุปกรณ์</span></td>
+          <td class="lang-hidden" data-en>Breakpoints: 980px (Tablet), 640px (Mobile)</td>
+          <td class="lang-hidden"><span class="badge badge-green lang-hidden">All devices supported</span></td>
+        </tr>
+        <tr>
+          <td><strong data-th>3D / Animation</strong><strong class="lang-hidden" data-en>3D / Animation</strong></td>
+          <td>Three.js (r128)</td>
+          <td><span class="badge badge-blue" data-th>Hero 3D Effect</span><span class="badge badge-blue lang-hidden" data-en>Hero 3D Effect</span></td>
+        </tr>
+        <tr>
+          <td><strong data-th>Carousel</strong><strong class="lang-hidden" data-en>Carousel</strong></td>
+          <td>Custom JS (carousel-advanced.js)</td>
+          <td><span class="badge badge-blue" data-th>สร้างเอง ไม่ใช้ Library</span><span class="badge badge-blue lang-hidden" data-en>Custom built, no library</span></td>
+        </tr>
+        <tr>
+          <td><strong data-th>แผนที่</strong><strong class="lang-hidden" data-en>Map</strong></td>
+          <td>Google Maps Embed</td>
+          <td><span class="badge badge-green" data-th>หน้าติดต่อเรา</span><span class="badge badge-green lang-hidden" data-en>Contact page</span></td>
+        </tr>
+        <tr>
+          <td><strong data-th>ฟอนต์</strong><strong class="lang-hidden" data-en>Font</strong></td>
+          <td>Google Fonts: Noto Sans Thai</td>
+          <td><span class="badge badge-purple" data-th>รองรับภาษาไทยครบ</span><span class="badge badge-purple lang-hidden" data-en>Full Thai support</span></td>
+        </tr>
+        <tr>
+          <td><strong>SEO Schema</strong></td>
+          <td>seo-schema.js (JSON-LD)</td>
+          <td><span class="badge badge-green" data-th>Structured Data</span><span class="badge badge-green lang-hidden" data-en>Structured Data</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+
+<!-- ===== FOOTER ===== -->
+<div class="report-footer">
+  <p style="margin-bottom:8px;" data-th>
+    <strong>จัดทำโดย:</strong> ทีมพัฒนาเว็บไซต์ &nbsp;|&nbsp;
+    <strong>บริษัท:</strong> SKY United Industrial (Thailand) Co., Ltd. &nbsp;|&nbsp;
+    <strong>เวอร์ชัน:</strong> 1.1
+  </p>
+  <p class="lang-hidden" data-en style="margin-bottom:8px; display:none;">
+    <strong>Prepared by:</strong> Web Development Team &nbsp;|&nbsp;
+    <strong>Company:</strong> SKY United Industrial (Thailand) Co., Ltd. &nbsp;|&nbsp;
+    <strong>Version:</strong> 1.1
+  </p>
+  <p>www.skyunitedth.com &nbsp;|&nbsp; sales@skyunitedth.com &nbsp;|&nbsp; 099-653-6354</p>
+</div>
+
+
+<script>
+  function setLang(lang) {
+    document.querySelectorAll('[data-th]').forEach(el => {
+      el.classList.toggle('lang-hidden', lang !== 'th');
+    });
+    document.querySelectorAll('[data-en]').forEach(el => {
+      el.classList.toggle('lang-hidden', lang !== 'en');
+    });
+    document.getElementById('btn-th').classList.toggle('active', lang === 'th');
+    document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+    document.documentElement.lang = lang === 'th' ? 'th' : 'en';
+  }
+  // init TH
+  setLang('th');
+</script>
+
+</body>
+</html>
