@@ -70,7 +70,7 @@ SkyI18n.applyLanguage = async (language) => {
   });
 
   SkyI18n.currentLanguage = language;
-  document.documentElement.lang = language;
+  document.documentElement.lang = document.documentElement.dataset.contentLang || language;
   document.documentElement.dataset.lang = language;
   localStorage.setItem("skyUnitedLanguage", language);
 
