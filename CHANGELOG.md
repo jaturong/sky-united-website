@@ -15,9 +15,28 @@
 ---
 
 ## 1.3 — 2026-11-23
+ปรับตามคำขอของเจ้าของเว็บ (LINE, TikTok, keywords SEO, ภาพสินค้า) — ขึ้นเว็บ 2 รอบในวันเดียวกัน
+
+**LINE / TikTok**
 - เพิ่มปุ่ม **LINE Official Account** และ **TikTok (@skyunitedth)** ในส่วนท้ายเว็บ ("ติดตามเรา" / "Follow Us") ทุกหน้า
 - เพิ่มปุ่ม LINE / TikTok ในหน้าติดต่อเรา
 - ปุ่มเปิดในแท็บใหม่ บนมือถือเปิดเข้าแอป LINE / TikTok ได้ทันที
+
+**สินค้าใหม่ 4 รายการ (หมวด ESD Packaging, ภาษาอังกฤษ)**
+- Clear Transparent Bag
+- Silicone Oil-free and Amide-free ESD Moisture Barrier Bag
+- Silicone Oil-free and Amide-free ESD BOPET Bag
+- Silicone Oil-free and Amide-free ESD Moisture Vapor Bag
+- แต่ละหน้ามีคำอธิบาย, ตารางข้อมูลจำเพาะ, ค่าความสะอาด (Cleanliness indicators) และแกลเลอรีรูป
+- หน้าผลิตภัณฑ์: หมวด ESD Packaging เพิ่มจาก 8 เป็น 12 รายการ
+
+**สินค้าเดิม**
+- Moisture Barrier Bags (MBB), Static Shielding Bags (SSB): เพิ่มตารางข้อมูลจำเพาะ, Product Summary (ภาษาอังกฤษ) และรูปสินค้าใหม่
+- Cleanroom Cotton Swabs: เพิ่มตารางรุ่นและขนาด 6 รุ่น (ST-001 – SF-006) พร้อมรูปหัวสำลี และรูปสินค้าใหม่ 6 รูป
+
+**SEO**
+- เพิ่ม meta keywords ในหน้าสินค้าใหม่และหน้าสินค้าที่ปรับ
+- sitemap.xml ระบุครบ 22 หน้า (เดิมมีเฉพาะหน้าแรก)
 
 ## 1.2.1 — 2026-11-23
 - เพิ่มไอคอนโลโก้ 192/512 px ใน `site.webmanifest` (ไอคอนตอน "เพิ่มลงหน้าจอโฮม" บนมือถือ) และอัปไฟล์นี้ขึ้นเว็บ (เดิมไม่มีบนเว็บ)

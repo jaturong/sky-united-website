@@ -2233,3 +2233,82 @@ html[data-lang="en"] a.len { display: inline !important; }
   font-size: 0.95rem;
   padding: 0.6rem 1.2rem;
 }
+
+/* ========================================
+   Product Specifications / Models / Indicators (1.4)
+   ======================================== */
+.prod-table--spec th:first-child,
+.prod-table--spec td:first-child {
+  width: 30%;
+  text-align: left;
+}
+
+.prod-table--spec td:first-child {
+  color: var(--color-ink);
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+
+/* ตารางรุ่น Cotton Swabs — สีเดียวกับตารางอื่นของเว็บ + ช่อง Tip Shape */
+.prod-table--models {
+  min-width: 760px;
+  font-size: 0.98rem;
+}
+
+.prod-table--models th,
+.prod-table--models td {
+  text-align: center;
+  vertical-align: middle;
+}
+
+.prod-table--models th {
+  white-space: normal;
+  line-height: 1.35;
+  letter-spacing: 0.02em;
+}
+
+.prod-table--models th:first-child {
+  width: auto;
+  text-align: center;
+}
+
+.prod-table--models td:first-child {
+  color: var(--color-primary);
+  font-size: 0.98rem;
+}
+
+.prod-table--models td.tip-cell {
+  padding: 0;
+  width: 110px;
+}
+
+.prod-table--models td.tip-cell img {
+  display: block;
+  width: 100%;
+  max-width: 110px;
+  height: auto;
+  margin: 0 auto;
+}
+
+.prod-table-note {
+  margin-top: 0.8rem;
+  font-size: 0.9rem;
+  color: var(--color-muted);
+}
+
+.prod-text-block p,
+.prod-indicator-list li {
+  line-height: 1.75;
+  color: var(--color-ink);
+  margin-bottom: 0.9rem;
+  max-width: 920px;
+}
+
+.prod-indicator-list {
+  padding-left: 1.3rem;
+}
+
+.prod-gallery-item--contain img {
+  object-fit: contain;
+  background: #ffffff;
+}
