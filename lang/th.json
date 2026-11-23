@@ -104,7 +104,8 @@
     "addressLabel": "📍 ที่อยู่",
     "emailLabel": "✉️ อีเมล",
     "phoneLabel": "📞 โทรศัพท์",
-    "websiteLabel": "🌐 เว็บไซต์"
+    "websiteLabel": "🌐 เว็บไซต์",
+    "socialLabel": "💬 LINE / TikTok"
   },
   "productsPage": {
     "title": "ผลิตภัณฑ์ของเรา",
@@ -138,6 +139,7 @@
       "label": "แผนที่:",
       "value": "ดูตำแหน่งบนแผนที่"
     },
-    "copyright": "© 2026 SKY United Industrial (Thailand) Co., Ltd. สงวนลิขสิทธิ์ทั้งหมด"
+    "copyright": "© 2026 SKY United Industrial (Thailand) Co., Ltd. สงวนลิขสิทธิ์ทั้งหมด",
+    "social": "ติดตามเรา"
   }
 }

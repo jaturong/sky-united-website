@@ -2172,3 +2172,64 @@ html[data-lang="en"] a.len { display: inline !important; }
     height: auto !important;
   }
 }
+
+/* ========================================
+   Social Links — LINE / TikTok (footer + contact)
+   ======================================== */
+.footer-social {
+  margin: 1.2rem 0 1.6rem;
+}
+
+.footer-social-heading {
+  margin: 0 0 0.6rem 0;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.social-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.social-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.45rem 0.95rem;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  line-height: 1;
+  text-decoration: none;
+  color: #ffffff;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.social-btn svg {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+}
+
+.social-btn:hover,
+.social-btn:focus-visible {
+  transform: translateY(-2px);
+  opacity: 0.9;
+  color: #ffffff;
+}
+
+.social-btn--line {
+  background: #06c755;
+}
+
+.social-btn--tiktok {
+  background: #111111;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.social-links--contact .social-btn {
+  font-size: 0.95rem;
+  padding: 0.6rem 1.2rem;
+}
